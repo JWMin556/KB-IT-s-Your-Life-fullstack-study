@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <span>span 태그 - inline 형식</span> 
-    <span>span 태그 - inline 형식</span> 
-    <span>span 태그 - inline 형식</span> 
-    <span>span 태그 - inline 형식</span> 
+    <style>
+      span {
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      input {
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline은 딱 그 글자만큼만 가능한 상황이다 -->
+    <!-- 너비,높이 지정 불가 -->
+    <!-- 너비는 내용물의 크기만큼만 차지하고 수평으로 쌓임 -->
+
     <span>span 태그 - inline 형식</span>
-</body>
+    <span>span 태그 - inline 형식</span>
+    <span>span 태그 - inline 형식</span>
+    <span>span 태그 - inline 형식</span>
+    <span>span 태그 - inline 형식</span>
+
+    <!-- 참고로 input은 inline-block이기에 너비, 높이 지정 가능하며 수평으로 쌓인다 -->
+    <input type="text" /><input type="text" />
+  </body>
 </html>

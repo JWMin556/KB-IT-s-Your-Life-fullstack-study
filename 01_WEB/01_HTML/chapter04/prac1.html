@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>코드마을 입주 신청서</legend>
+        <table>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" name="name" /></td>
+          </tr>
+
+          <tr>
+            <td>이메일</td>
+            <td><input type="email" name="email" /></td>
+          </tr>
+
+          <tr>
+            <td>비번</td>
+            <td><input type="password" name="pw" /></td>
+          </tr>
+
+          <tr>
+            <td>비번확인</td>
+            <td><input type="password" name="pwCheck" /></td>
+          </tr>
+        </table>
+
+        <fieldset>
+          <legend>성별</legend>
+          <input id="man" type="radio" name="sex" value="m" />
+          <label for="man">남</label>
+          <input id="woman" type="radio" name="sex" value="w" />
+          <label for="woman">여</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>사용 가능한 언어</legend>
+          <input id="soccer" name="hobby" type="checkbox" value="s" />
+          <label for="soccer">HTML</label>
+          <input id="baseball" name="hobby" type="checkbox" value="base" />
+          <label for="baseball">CSS</label>
+          <input id="volleyball" name="hobby" type="checkbox" value="v" />
+          <label for="volleyball">JS</label>
+          <input id="basketball" name="hobby" type="checkbox" value="basket" />
+          <label for="basketball"> Python</label>
+        </fieldset>
+
+        <div>프로필 사진 <input type="file" name="" id="" /></div>
+        <input type="submit" value="입주 신청" />
+        <input type="reset" value="초기화" />
+      </fieldset>
+    </form>
+  </body>
+</html>
