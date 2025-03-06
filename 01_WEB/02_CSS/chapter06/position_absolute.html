@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute; /* 이를 통해 겹쳐진다...다 동일한 각도로 ... 맨 마지막 박스인 파랑박스가 맨 위에 있는 것이다*/
+        /* static이 디폴트인 포지션이다...static은 원래 있어야 하는 위치를 의미 */
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+      }
+      #container {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    안녕
+    <div id="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

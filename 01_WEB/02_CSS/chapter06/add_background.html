@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      div {
+        /* width: 200px; */
+        height: 200px;
+        /* 사이즈만 줄였는데, 사진이 반복된다. 즉, 반복이 디폴트다 */
+        background-size: 50px;
+        /* 하지만 no repeat를 하면 반복되지 않는다 */
+        background-repeat: no-repeat;
+        /* 배경 색상 */
+        background-color: pink;
+        /* 배경 이미지 위치 */
+        background-position: center;
+        /* 배경 이미지 -> 색상 위에 올라온다 */
+        background-image: url('https://i.pinimg.com/736x/e6/a7/68/e6a76815147412ff947a985fda77459d.jpg');
+        /* cover는 요소의 긴쪽에 맞춰서 이미지가 채워진다. 반면에 contain은 요소의 짧은 쪽에 맞춰서 이미지가 채워진다. */
+        background-size: contain;
+        /* 스크롤 내렸을 경우에도 이미지 고정 */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

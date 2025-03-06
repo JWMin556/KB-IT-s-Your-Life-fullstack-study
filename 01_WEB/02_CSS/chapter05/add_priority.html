@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 즉, imporrant > 인라인 > id > class > 태그 순으로 우선순위가 높음 */
+      /* 그럼 만약 .list li.item은 21점정도 */
+      /* #submit span은 101점 */
+      /* header .memu li:nth-child(2)같은 녀석은 22점 */
+      /* important붙으면 최고점수 */
+      div {
+        color: red !important;
+      }
+      /* 일반태그 선택자: 1점 */
+      div {
+        color: orange;
+      }
+      /* id선택자: 100점 */
+      #yellow {
+        color: yellow;
+      }
+      /* 클래스 선택자: 10점 */
+      .green {
+        color: green;
+      }
+      /* 전체 선택자: 0점 */
+      * {
+        color: blue;
+      }
+      body {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="yellow" class="green" style="color: orange">안녕하소</div>
+    <!-- 인라인으로 붙으면 우선순위 1000점 -->
+  </body>
+</html>
