@@ -1,41 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <title>Chill Guy의 방</title>
-    <style>
-      body {
-        background-color: skyblue;
-        text-align: center;
-      }
-      h1 {
-        font-size: 50px;
-        font-weight: bold;
-      }
-      .room {
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Chill Guy의 방 리모델링</h1>
+    <head>
+        <title>Chill Guy의 방</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: skyblue;
+            }
+            h1 {
+                font-size: 50px;
+                font-weight: bold;
+            }
+            .room {
+                background-image: url('data:image/jpeg;base64,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');
+                width: 60rem;
+                height: 11rem;
+                background-repeat: repeat-x;
+                border-radius: 1rem;
+                border: 5px solid black;
+                position: relative;
+            }
+            .furniture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                background-color: #fff;
+                width: 5.5rem;
+                height: 3rem;
+                font-weight: bold;
+                border-radius: 1rem;
+            }
+            .bed {
+                top: 5px;
+                left: 5px;
+            }
+            .chair {
+                top: 36%;
+                left: 44%;
+            }
+            .tv {
+                background-color: #332f2f;
+                box-shadow: 5px 5px 10px #332f2f;
+                border: 1px solid white;
+                color: white;
+                width: 10rem;
+                position: fixed;
+                bottom: 0.5rem;
+                right: 0.8rem;
+            }
 
-    <!-- 방 영역 (벽지 포함) -->
-    <div class="room">
-      <div class="furniture bed">🛏️ 침대</div>
-      <div class="furniture chair">🪑 의자</div>
-    </div>
+            .content {
+                width: 65rem;
+                height: 8rem;
+                background-color: white;
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 1px solid gray;
+                box-shadow: 5px 5px 10px gray;
+            }
 
-    <!-- 내용 영역 -->
-    <div class="content">
-      <p>
-        Chill Guy의 방에는 편안한 가구와 함께, 벽에 Chill한 벽지가 붙어
-        있습니다.
-      </p>
-      <p>
-        스크롤을 내려보세요! TV는 항상 화면 오른쪽 하단에 고정되어 있습니다.
-      </p>
-    </div>
+            .content p {
+                margin-left: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chill Guy의 방 리모델링</h1>
 
-    <!-- 화면 고정 TV -->
-    <div class="furniture tv">📺 TV - Chill 뉴스</div>
-  </body>
+        <!-- 방 영역 (벽지 포함) -->
+        <div class="room">
+            <div class="furniture bed">🛏️ 침대</div>
+            <div class="furniture chair">🪑 의자</div>
+        </div>
+
+        <!-- 내용 영역 -->
+        <div class="content">
+            <p>Chill Guy의 방에는 편안한 가구와 함께, 벽에 Chill한 벽지가 붙어 있습니다.</p>
+            <p>스크롤을 내려보세요! TV는 항상 화면 오른쪽 하단에 고정되어 있습니다.</p>
+        </div>
+
+        <!-- 화면 고정 TV -->
+        <div class="furniture tv">📺 TV - Chill 뉴스</div>
+    </body>
 </html>
