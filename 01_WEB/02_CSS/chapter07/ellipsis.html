@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ellipsis</title>
+    <style>
+      h1,
+      p {
+        width: 300px;
+      }
+
+      /* 말 줄임표를 사용할 때의 규칙이다 */
+      .ellipsis {
+        white-space: nowrap; /* 줄바꿈하지 말고 한줄로 표시하라 */
+        overflow: hidden; /*넘치는 글자를 숨기기*/
+        text-overflow: ellipsis; /* 잘린 글자 끝에 ... 붙이기 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="ellipsis">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum!
+    </h1>
+    <p class="ellipsis">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ipsa.
+    </p>
+  </body>
+</html>

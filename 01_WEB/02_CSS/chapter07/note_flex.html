@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <style>
+      body {
+        width: 500px;
+        margin: 10px auto;
+      }
+      #middle {
+        /* 수평정렬, 부모요소에 넣어줘야 함 */
+        display: flex;
+      }
+      #left {
+        width: 150px;
+        background: red;
+      }
+      #right {
+        width: 350px;
+        background: blue;
+      }
+      #top {
+        background: green;
+      }
+      #bottom {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+      repudiandae commodi illum blanditiis nobis rem voluptas iure temporibus,
+      ratione tempora placeat nesciunt dignissimos mollitia sequi excepturi
+      dolore, quia, consequuntur quaerat? Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Ullam repudiandae commodi illum blanditiis
+      nobis rem voluptas iure temporibus, ratione tempora placeat nesciunt
+      dignissimos mollitia sequi excepturi dolore, quia, consequuntur quaerat?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+      repudiandae commodi illum blanditiis nobis rem voluptas iure temporibus,
+      ratione tempora placeat nesciunt dignissimos mollitia sequi excepturi
+      dolore, quia, consequuntur quaerat?
+    </div>
+    <div id="middle">
+      <div id="left">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+      </div>
+      <div id="right">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+        repudiandae commodi illum blanditiis nobis rem voluptas iure temporibus,
+        ratione tempora placeat nesciunt dignissimos mollitia sequi excepturi
+        dolore, quia, consequuntur quaerat?
+      </div>
+    </div>
+    <div id="bottom">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+      repudiandae commodi illum blanditiis nobis rem voluptas iure temporibus,
+      ratione tempora placeat nesciunt dignissimos mollitia sequi excepturi
+      dolore, quia, consequuntur quaerat?
+    </div>
+  </body>
+</html>

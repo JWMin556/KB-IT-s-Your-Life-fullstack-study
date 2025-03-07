@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: relative;
+        width: 600px;
+        background-color: red;
+      }
+      .container {
+        width: 400px;
+        background-color: rgb(54, 82, 151);
+        /* position: relative; */
+      }
+      .container .item {
+        border: 2px solid black;
+        background-color: darkgreen;
+      }
+      .container .item:nth-child(1) {
+        width: 100px;
+        height: 150px;
+      }
+      .container .item:nth-child(2) {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        /* absolute는 일반적으로 relative와 함께 사용하며, 가장 가깝게 있는 relative가 부모이다. 하지만 relative가 없으면 전체화면 기준 */
+        bottom: 30px;
+        right: 50px;
+      }
+      .container .item:nth-child(3) {
+        width: 150px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+      </div>
+    </div>
+  </body>
+</html>

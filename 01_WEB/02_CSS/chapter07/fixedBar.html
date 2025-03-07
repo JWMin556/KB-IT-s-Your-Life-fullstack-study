@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Bar</title>
+    <style>
+      .container {
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-bottom: 60px; /*마지막에 끊어지는 현상을 막고자*/
+      }
+      /* .top_bar {
+        background: red;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 50px;
+      } */
+      .bottom_bar {
+        /* 그러나 이렇게 하면 화면의 크기를 엄청 줄여서 스크롤바를 생기게 하고 가장 끝까지 갈때, 마지막이 끊어지는 현상이 있다. 그래서 container에 추가적인 마진필요 */
+        background-color: red;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+      }
+      .left_bar {
+        background: blue;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="top_bar"></div> -->
+    <div class="bottom_bar"></div>
+    <div class="left_bar"></div>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+        reprehenderit illo nihil doloremque impedit. Consequatur suscipit magnam
+        deleniti veniam tempora! Inventore quasi distinctio odit hic, fugiat
+        necessitatibus non ut eligendi?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+        reprehenderit illo nihil doloremque impedit. Consequatur suscipit magnam
+        deleniti veniam tempora! Inventore quasi distinctio odit hic, fugiat
+        necessitatibus non ut eligendi?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+        reprehenderit illo nihil doloremque impedit. Consequatur suscipit magnam
+        deleniti veniam tempora! Inventore quasi distinctio odit hic, fugiat
+        necessitatibus non ut eligendi?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+        reprehenderit illo nihil doloremque impedit. Consequatur suscipit magnam
+        deleniti veniam tempora! Inventore quasi distinctio odit hic, fugiat
+        necessitatibus non ut eligendi?
+      </p>
+    </div>
+  </body>
+</html>

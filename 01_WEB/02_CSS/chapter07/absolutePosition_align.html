@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute Position</title>
+    <style>
+      /* 초기화 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 주제 */
+      body {
+        background-color: red;
+      }
+
+      #container {
+        /* 색상 및 크기 적용 */
+        width: 500px;
+        height: 250px;
+        background-color: orange;
+        /* 위치 설정 */
+        position: absolute;
+        /* 요소의 시작점을 가운데로 맞춰준다 */
+        left: 50%;
+        top: 50%;
+        /* 요소의 절반 크기만틈 다시 당겨온다 */
+        margin-left: -250px;
+        margin-top: -125px;
+        /* calc(50% - 125px)이런 식으로 함수계산을 통해서 넣어줄 수 있다.  */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>요소의 중앙 배치</h1>
+    </div>
+  </body>
+</html>
