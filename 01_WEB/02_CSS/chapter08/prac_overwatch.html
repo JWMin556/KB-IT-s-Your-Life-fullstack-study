@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Overwatch Heroes</title>
+    </head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(images/bg.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .heroContainer {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1rem;
+        }
+
+        .heroDiv {
+            width: 5.5rem;
+            height: 6rem;
+            margin-right: 1rem;
+            border: 5px solid white;
+            border-radius: 15px;
+            background-color: gray;
+            display: flex; /* 이미지 정렬을 위해 추가 */
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* 넘치는 부분 잘라내기 */
+            transform: skewX(-20deg); /* 부모를 기울이기 */
+            transition: all 0.3s ease-in-out; /* 부드러운 애니메이션 */
+        }
+        .heroDiv:hover {
+            background-color: orange;
+            transform: skewX(-20deg) scale(1.1); /* 크기만 증가 */
+        }
+
+        .hero {
+            transform: skewX(20deg); /* 반대로 보정하여 원래 모습 유지 */
+            width: 100%; /* 부모 크기에 맞추기 */
+            height: 100%;
+            object-fit: cover; /* 이미지 비율 유지하면서 채우기 */
+        }
+
+        #overwatchLogo {
+            margin-top: 5rem;
+            width: 17rem;
+            height: 10rem;
+        }
+    </style>
+    <body>
+        <div class="heroContainer" style="margin-top: 7rem">
+            <div class="heroDiv">
+                <img src="./images/hero1.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero2.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero3.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero4.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero5.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero6.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero7.png" alt="영웅1" class="hero" />
+            </div>
+        </div>
+        <div class="heroContainer">
+            <div class="heroDiv">
+                <img src="./images/hero8.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero9.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero10.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero11.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero12.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero13.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero14.png" alt="영웅1" class="hero" />
+            </div>
+        </div>
+        <div class="heroContainer">
+            <div class="heroDiv">
+                <img src="./images/hero15.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero16.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero17.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero18.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero19.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero20.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero21.png" alt="영웅1" class="hero" />
+            </div>
+        </div>
+        <div class="heroContainer">
+            <div class="heroDiv">
+                <img src="./images/hero22.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero23.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero24.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero25.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero26.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero27.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero28.png" alt="영웅1" class="hero" />
+            </div>
+        </div>
+        <div class="heroContainer">
+            <div class="heroDiv">
+                <img src="./images/hero29.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero30.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero31.png" alt="영웅1" class="hero" />
+            </div>
+            <div class="heroDiv">
+                <img src="./images/hero32.png" alt="영웅1" class="hero" />
+            </div>
+        </div>
+
+        <img src="./images/logo_overwatch.png" alt="" id="overwatchLogo" />
+    </body>
+</html>
