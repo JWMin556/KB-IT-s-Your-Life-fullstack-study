@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script>
-            // 함수를 선언합니다.
-            function callTenTimes(callback) {
-                for (let i = 0; i < 10; i++) {
-                    callback();
-                }
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 함수를 선언합니다.
+      function callTenTimes(callback) {
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
 
-            // 함수를 호출합니다.
-            callTenTimes(function () {
-                alert('함수 호출');
-            });
-        </script>
-    </head>
-    <body></body>
+      // 함수를 호출합니다.
+      callTenTimes(function () {
+        //즉, 익명함수를 한번만 쓰고 더 이상 재활용하지 않을때 이렇게 함수 자체를 콜백함수로 넘겨준다.
+        console.log('함수 호출');
+      });
+    </script>
+  </head>
+  <body></body>
 </html>

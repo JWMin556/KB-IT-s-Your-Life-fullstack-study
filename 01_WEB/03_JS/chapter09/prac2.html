@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function findRandomPokemon() {
+        let pokemons = [
+          '피카츄',
+          '파이리',
+          '꼬부기',
+          '이상해씨',
+          '뮤츠',
+          '리자몽',
+        ];
+        let index = Math.floor(Math.random() * pokemons.length); //꽤나 중요한 코드... 이렇게 해당 범위 (여기서는 포켓몬배열길이) 내에서 무작위로 값을 뽑는다.
+        // Math.random()은 0보다 크거나 1보다 작은 실수를 반환한다.
+        return `야생의 ${pokemons[index]}가 나타났다!`;
+      }
+      console.log(findRandomPokemon());
+      console.log(findRandomPokemon());
+      console.log(findRandomPokemon());
+    </script>
+  </head>
+  <body></body>
+</html>
