@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DOM Basic</title>
-        <script>
-            // 이벤트를 연결합니다.
-            window.onload = function () {
-                // 속성을 지정합니다.
-                document.body.setAttribute('data-custom', 'value');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basic</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 사용자 지정 속성을 설정합니다. 보통 key값은 (data-)로 시작한다.
+        document.body.setAttribute('data-custom', 'value'); // 왼쪽이 key, 오른쪽이 value
 
-                // 속성을 추출합니다.
-                let dataCustom = document.body.getAttribute('data-custom');
-                alert(dataCustom);
-            };
-        </script>
-    </head>
-    <body></body>
+        // 설정해둔 속성을 가져온다
+        let dataCustom = document.body.getAttribute('data-custom');
+        alert(dataCustom);
+      };
+    </script>
+  </head>
+  <body></body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let btn = document.querySelector('#checkBalanceBtn');
+        function randomNum(min, max) {
+          var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+          return randNum;
+        }
+        btn.onclick = function () {
+          let random = randomNum(100000, 1000000);
+          let para = document.querySelector('#balanceDisplay');
+          //   console.log(random);
+          para.innerHTML = `잔액: ${random
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')} 원`;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="checkBalanceBtn">잔액 조회</button>
+    <p id="balanceDisplay">잔액: ? 원</p>
+  </body>
+</html>

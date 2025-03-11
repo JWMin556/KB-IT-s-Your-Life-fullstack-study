@@ -1,20 +1,20 @@
 <head>
-    <title>DOM Basic</title>
-    <script>
-        // 이벤트를 연결합니다.
-        window.onload = function () {
-            // 문서 객체를 선택합니다.
-            let header = document.querySelector('h1');
+  <title>DOM Basic</title>
+  <script>
+    // 이벤트를 연결합니다.
+    window.onload = function () {
+      // 문서 객체를 선택합니다. 요소가 여러 개일 경우 맨 처음만 선택한다.
+      let header = document.querySelector('h1');
 
-            // 문서 객체를 조작합니다.
-            header.style.color = 'orange';
-            header.style.background = 'red';
-            header.innerHTML = 'From JavaScript';
-        };
-    </script>
+      // 문서 객체를 조작합니다.
+      header.style.color = 'orange';
+      header.style.background = 'red';
+      header.innerHTML = 'From JavaScript';
+    };
+  </script>
 </head>
 <body>
-    <h1>Header</h1>
-    <h1>Header</h1>
-    <h1>Header</h1>
+  <h1>Header</h1>
+  <h1>Header</h1>
+  <h1>Header</h1>
 </body>

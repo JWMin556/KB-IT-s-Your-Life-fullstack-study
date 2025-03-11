@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 여기서는 krwInput을 미리 선언하지 않습니다.
+      document.addEventListener('DOMContentLoaded', function () {
+        let krwInput = document.querySelector('#krwInput'); // input 요소를 가져옵니다.
+        krwInput.addEventListener('input', function (e) {
+          const rate = 1300; // 환율 설정
+          let changedRate = (krwInput.value / rate).toFixed(2); // input 값으로 환산
+          console.log('changedRate: ', changedRate);
+
+          // 결과를 화면에 출력
+          document.querySelector(
+            '#usdResult'
+          ).textContent = `달러(USD): ${changedRate}`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="number" id="krwInput" placeholder="원화 입력" />
+    <p id="usdResult">달러(USD):</p>
+  </body>
+</html>

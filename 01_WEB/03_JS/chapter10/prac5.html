@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let btn = document.querySelector('#addNewsBtn');
+        btn.onclick = () => {
+          let newsInput = document.querySelector('#newsInput').value;
+          if (newsInput === '') {
+            alert('뉴스 내용을 추가해라');
+          } else {
+            let li = document.createElement('li');
+            li.setAttribute('id', newsInput);
+            let textNode = document.createTextNode(newsInput);
+            li.appendChild(textNode);
+
+            document.querySelector('#newsList').appendChild(li);
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" id="newsInput" placeholder="금융 뉴스 입력" />
+    <button id="addNewsBtn">뉴스 추가</button>
+    <ul id="newsList"></ul>
+  </body>
+</html>

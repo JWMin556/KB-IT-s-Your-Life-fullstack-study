@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Clock</title>
-        <script>
-            // 이벤트를 연결합니다.
-            window.onload = function () {
-                // 문서 객체를 선택합니다.
-                let clock = document.getElementById('clock');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <script>
+      window.onload = function () {
+        let clock = document.getElementById('clock');
 
-                // 1초마다 함수를 실행합니다.
-                setInterval(function () {
-                    let now = new Date();
-                    clock.innerHTML = now.toString();
-                }, 1000);
-            };
-        </script>
-    </head>
-    <body>
-        <h1 id="clock"></h1>
-    </body>
+        // 1초마다 간격을 두고 계속 실행한다.
+        setInterval(function () {
+          let now = new Date();
+          clock.innerHTML = now.toString();
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+  </body>
 </html>
