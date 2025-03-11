@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dangerousPrice = 10000000;
+            let investAmount = document.querySelector('#investAmount');
+            investAmount.addEventListener('input', (e) => {
+                let investAmountValue = e.target.value;
+                let sentence = '';
+                if (investAmountValue >= dangerousPrice) {
+                    sentence = '고위험 투자';
+                } else {
+                    sentence = '저위험 투자';
+                }
+                document.querySelector('#riskMessage').innerHTML = sentence;
+            });
+        });
+    </script>
+    <body>
+        <input type="number" id="investAmount" placeholder="투자 금액 입력" />
+        <p id="riskMessage"></p>
+    </body>
+</html>

@@ -6,19 +6,24 @@
     <title>Document</title>
     <script>
       window.onload = function () {
-        let btn = document.getElementById('btn');
-        let name = document.getElementById('name');
+        let btn = document.querySelector('#checkBalanceBtn');
+        function randomNum(min, max) {
+          var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+          return randNum;
+        }
         btn.onclick = function () {
-          console.log(`내 이름: ${name.value}`);
+          let random = randomNum(100000, 1000000);
+          let para = document.querySelector('#balanceDisplay');
+          //   console.log(random);
+          para.innerHTML = `잔액: ${random
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')} 원`;
         };
       };
     </script>
   </head>
   <body>
-    <form>
-      <label for="name">이름:</label>
-      <input id="name" name="name" type="text" size="30" />
-      <input id="btn" type="button" value="전송" />
-    </form>
+    <button id="checkBalanceBtn">잔액 조회</button>
+    <p id="balanceDisplay">잔액: ? 원</p>
   </body>
 </html>
