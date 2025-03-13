@@ -1,3 +1,3 @@
 const fs = require('fs');
-fs.unlinkSync('./text-1.txt');
+fs.unlinkSync('./sec03/text-1.txt');
 console.log('file deleted');
