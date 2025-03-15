@@ -1,5 +1,5 @@
-import { Customer } from './Customer.js';
-import { ConsultationManager } from './ConsultationManager.js';
+import {Customer} from './Customer.js';
+import {ConsultationManager} from './ConsultationManager.js';
 
 // 상담 매니저 인스턴스 생성
 const manager = new ConsultationManager();
