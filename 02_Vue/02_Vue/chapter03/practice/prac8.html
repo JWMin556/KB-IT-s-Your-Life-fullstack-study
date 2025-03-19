@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h3>마음 속 이유(다중 선택):</h3>
+        <!-- 글자 선택했을 때, 바로 체크박스랑 연동하려고 label을 이용 -->
+        <label>
+          <input type="checkbox" value="웃을 때 예뻐서" v-model="reason" />
+          웃을 때 예뻐서
+        </label>
+
+        <label>
+          <input type="checkbox" value="마음이 따뜻해서" v-model="reason" />
+          마음이 따뜻해서
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            value="함께 있으면 편안해서"
+            v-model="reason"
+          />
+          함께 있으면 편안해서
+        </label>
+
+        <label>
+          <input type="checkbox" value="내 편이 되어 줘서" v-model="reason" />
+          내 편이 되어 줘서
+        </label>
+
+        <label>
+          <input type="checkbox" value="배려심이 깊어서" v-model="reason" />
+          배려심이 깊어서
+        </label>
+      </div>
+      <hr />
+      <span v-if="reason.length > 0"
+        >선택 항목({{reason.length}}개): {{reason.join(',')}}</span
+      >
+      <span v-else="reason">아직 이유를 고르지 않았어요!</span>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            reason: [],
+            category: '',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -7,10 +7,11 @@
   </head>
   <body>
     <div id="app">
-      <!-- vi-bind:단방향 바인딩으로 데이터에 있는 값을 가져오며 :으로 생략해서 표시가능 -->
-      <input type="text" v-bind:value="message" />
-      <br />
-      <img :src="imagePath" />
+      <h1>추천 고백 장소 top3</h1>
+      <ul v-for="(c, index) in contacts">
+        <!-- <li v-for="c in contacts.slice(0,3)" :key="c">{{c}}</li> -->
+        <li v-if="index < 3">{{c}}</li>
+      </ul>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
@@ -19,8 +20,13 @@
         name: 'App',
         data() {
           return {
-            message: 'v-bind 디렉티브',
-            imagePath: 'https://contactsvc.bmaster.kro.kr/photos/18.jpg',
+            contacts: [
+              '1. 한강공원',
+              '2. 루프탑 카페',
+              '3. 바닷가',
+              '4. 놀이공원',
+              '5. 분수광장',
+            ],
           };
         },
       }).mount('#app');

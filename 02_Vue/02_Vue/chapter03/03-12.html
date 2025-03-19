@@ -32,6 +32,8 @@
           </tr>
         </thead>
         <tbody id="contacts">
+          <!-- contacts 배열을 돌면서 contact라는 이름으로 객체를 꺼내온다
+          키는 고유한 값인 contact의 no로 처리 -->
           <tr v-for="contact in contacts" :key="contact.no">
             <td>{{contact.no}}</td>
             <td>{{contact.name}}</td>

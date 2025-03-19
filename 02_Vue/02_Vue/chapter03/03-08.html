@@ -7,6 +7,7 @@
   </head>
   <body>
     <div id="app">
+      <!-- 한글의 경우 v-model 대신 v-bind + @input의 조합을 사용 -->
       <input type="text" :value="name" @input="changeName" />
       <br />
       이름: <span>{{name}}</span>
@@ -20,6 +21,8 @@
         },
         methods: {
           changeName(e) {
+            // this는 vm을 의미한다.
+            // e.target같은 경우는 이벤트가 발생한 객체를 의미한다 (input)
             this.name = e.target.value;
           },
         },

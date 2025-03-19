@@ -7,10 +7,13 @@
   </head>
   <body>
     <div id="app">
-      <!-- vi-bind:단방향 바인딩으로 데이터에 있는 값을 가져오며 :으로 생략해서 표시가능 -->
-      <input type="text" v-bind:value="message" />
+      사랑 지수:
+      <input type="text" v-model="love" />
       <br />
-      <img :src="imagePath" />
+      <span v-if="love >= 1000">Love Master</span>
+      <span v-else-if="love >= 500">Love Expert</span>
+      <span v-else-if="love >= 200">Love Learner</span>
+      <span v-else="love">Newbie</span>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
@@ -18,10 +21,7 @@
       let vm = Vue.createApp({
         name: 'App',
         data() {
-          return {
-            message: 'v-bind 디렉티브',
-            imagePath: 'https://contactsvc.bmaster.kro.kr/photos/18.jpg',
-          };
+          return { love: '' };
         },
       }).mount('#app');
     </script>

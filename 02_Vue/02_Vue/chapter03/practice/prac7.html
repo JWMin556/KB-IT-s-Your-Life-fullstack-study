@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <textarea v-model="love" placeholder="편지 내용을 입력하세요"></textarea>
+      <p>현재 글자 수: {{love.length}}자</p>
+
+      <span v-if="love.length >= 400"
+        >등급: S - 폭풍 같은 집중력! 감동의 편지가 될 거예요.</span
+      >
+      <span v-else-if="love.length >= 300"
+        >등급: A - 멋져요! 충분히 마음이 담기고 있어요.</span
+      >
+      <span v-else-if="love.length >= 200"
+        >등급: B - 속도 좋습니다! 감정을 더 담아보세요.</span
+      >
+      <span v-else-if="love.length >= 100"
+        >등급: C - 좋아요! 이제 리듬을 타고 있어요.</span
+      >
+      <span v-else="love.length"
+        >등급: D - 아직 시작 단계예요. 천천히 적어봐요!</span
+      >
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { love: '' };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

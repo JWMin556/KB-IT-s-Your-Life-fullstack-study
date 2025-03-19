@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="name" placeholder="이름 입력" />
+      <br />
+      <br />
+      <textarea v-model="letter" placeholder="편지 내용"></textarea>
+      <div>
+        <h3>마음 속 이유(2개 이상을 선택하세요):</h3>
+
+        <label>
+          <input type="checkbox" value="a" v-model="reason" />
+          유머 감각
+        </label>
+
+        <label>
+          <input type="checkbox" value="b" v-model="reason" />
+          신뢰
+        </label>
+
+        <label>
+          <input type="checkbox" value="c" v-model="reason" />
+          배려
+        </label>
+
+        <label>
+          <input type="checkbox" value="d" v-model="reason" />
+          따뜻함
+        </label>
+
+        <label>
+          <input type="checkbox" value="e" v-model="reason" />
+          같이 있으면 편안함
+        </label>
+      </div>
+
+      시간:
+      <input type="number" v-model="time" />
+
+      <p v-if="name <= 0">❗이름을 입력해주세요.</p>
+      <p v-if="letter.length < 200">
+        ❗편지 내용을 200자 이상 작성해주세요. (현재 {{letter.length}}자)
+      </p>
+      <p
+        v-if="reason.filter(value => ['b', 'c', 'd'].includes(value)).length < 2"
+      >
+        ❗'신뢰', '배려', '따뜻함' 중 최소 2개를 선택해주세요.
+      </p>
+      <p v-if="time > 18">❗현재 시간이 너무 늦었어요!(마감: 18시)</p>
+
+      <br />
+      <button
+        v-if="name && letter.length >= 200 && reason.filter(value => ['b', 'c', 'd'].includes(value)).length >= 2 && time <= 18 && time != ''"
+      >
+        마지막 고백 결심하기
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { name: '', letter: '', reason: [], time: '' };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -7,10 +7,12 @@
   </head>
   <body>
     <div id="app">
-      <!-- vi-bind:단방향 바인딩으로 데이터에 있는 값을 가져오며 :으로 생략해서 표시가능 -->
-      <input type="text" v-bind:value="message" />
-      <br />
-      <img :src="imagePath" />
+      <label>
+        <input type="checkbox" v-model="love" />
+        고백할 준비가 되었나요?
+      </label>
+
+      <div v-show="love > 0">고백할 준비 완료!</div>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
@@ -19,8 +21,7 @@
         name: 'App',
         data() {
           return {
-            message: 'v-bind 디렉티브',
-            imagePath: 'https://contactsvc.bmaster.kro.kr/photos/18.jpg',
+            love: '',
           };
         },
       }).mount('#app');

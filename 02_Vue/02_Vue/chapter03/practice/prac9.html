@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="number" v-model="num" />
+      <p>아직 준비할 항목:</p>
+
+      <div v-if="num >= 18">
+        <!-- num이 18 이상이면 마지막 항목만 표시 -->
+        <ul>
+          <li v-for="(l, index) in love.slice(love.length - 1)" :key="index">
+            {{l}}
+          </li>
+        </ul>
+      </div>
+      <div v-else>
+        <!-- num이 18 미만이면 모든 항목 표시 -->
+        <ul>
+          <li v-for="(p, index) in love" :key="index">{{p}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            love: [
+              '- 편지 작성',
+              '- 편지 검토',
+              '- 봉투 밀봉',
+              '- 스탬프 찍기',
+            ],
+            num: '',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

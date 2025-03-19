@@ -7,13 +7,8 @@
   </head>
   <body>
     <div id="app">
-      <!-- v로 시작하면 무조건 data()에서 찾으라 -->
-      <!-- v-model: 데이터 -> 화면, 화면 -> 데이터 양방향 바인딩 가능 -->
-      <!-- 보통 사용자가 입력하는 form 요소에 사용 -->
-      <input type="text" v-model="name" />
-      <br />
-      입력한 값: <span>{{name}}</span>
-      <!-- 참고로 한글은 종성문자를 완성하는 것 때문에 바로바로 반영이 안될 수 있다 -->
+      <input type="text" v-model="name" placeholder="이름을 알려줘요" />
+      <h1>{{name}}님에게 보내는 편지</h1>
     </div>
 
     <script src="https://unpkg.com/vue"></script>

@@ -8,6 +8,8 @@
   <body>
     <div id="app">
       예금액: <input type="text" v-model="amount" />
+      <!-- v-if: 조건에 따라 요소를 보여줄지 결정함
+      조건이 false라면 아예 요소를 렌더링 하지 않는다. 그렇기에 v-show와 구분할 필요 -->
       <img
         v-if="amount < 0"
         src="https://contactsvc.bmaster.kro.kr/img/error.png"
