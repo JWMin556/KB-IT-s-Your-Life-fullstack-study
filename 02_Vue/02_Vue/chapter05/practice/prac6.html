@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            마법이론: <input type="text" v-model.number="theory" /> <br />
+            주문실습: <input type="text" v-model.number="practice" /> <br />
+            비행수업: <input type="text" v-model.number="fly" /> <br />
+            <button @click="test">평가하기</button> <br />
+            <p>{{ pointStatus }}</p>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            let vm = Vue.createApp({
+                data() {
+                    return {
+                        theory: '',
+                        practice: '',
+                        fly: '',
+                        avg: '',
+                        great: false,
+                        pass: false,
+                        nuPass: false,
+                    };
+                },
+                computed: {
+                    pointStatus() {
+                        if (this.great) {
+                            return `최우수 합격! (평균: ${this.avg}점)`;
+                        }
+
+                        if (this.pass) {
+                            return `합격 (평균: ${this.avg}점)`;
+                        }
+
+                        if (this.nuPass) {
+                            return `불합격 (평균: ${this.avg}점)`;
+                        }
+                    },
+                },
+                methods: {
+                    test() {
+                        this.great = false;
+                        this.pass = false;
+                        this.nuPass = false;
+                        this.avg = Math.floor((this.theory + this.practice + this.fly) / 3);
+                        if (this.avg >= 90) {
+                            this.great = true;
+                        } else if (this.avg >= 70 && this.avg < 90) {
+                            this.pass = true;
+                        } else {
+                            this.nuPass = true;
+                        }
+                    },
+                },
+                watch: {
+                    theory(current, old) {
+                        if (current && (current > 100 || current < 0)) {
+                            alert('점수는 0~100 사이로 입력해주세요!');
+                        }
+                    },
+                    practice(current, old) {
+                        if (current && (current > 100 || current < 0)) {
+                            alert('점수는 0~100 사이로 입력해주세요!');
+                        }
+                    },
+                    fly(current, old) {
+                        if (current && (current > 100 || current < 0)) {
+                            alert('점수는 0~100 사이로 입력해주세요!');
+                        }
+                    },
+                },
+            }).mount('#app');
+        </script>
+    </body>
+</html>

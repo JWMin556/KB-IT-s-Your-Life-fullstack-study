@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>📚 호그와트 마법 도서관</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>📚 호그와트 마법 도서관 출입 관리 시스템</h1>
+
+            <p>
+                마법사 이름 입력:
+                <input type="text" v-model="name" />
+                <button @click="addEntry" :disabled="isFull">출입 기록 추가</button>
+            </p>
+
+            <p v-if="isFull" style="color: red">⚠ 현재 도서관 인원 포화 상태입니다! 더 이상 출입할 수 없습니다.</p>
+
+            <h2>📜 현재 도서관 출입 중 (최근 순):</h2>
+            <ul>
+                <li v-for="(wizard, index) in library.slice().reverse()" :key="wizard">
+                    {{index + 1}}. {{ wizard }}
+                    <button @click="removeEntry(index)">퇴장</button>
+                </li>
+            </ul>
+
+            <h2>🔥 출입 횟수 통계:</h2>
+            <p v-if="topWizard">{{ topWizard.name }} ({{ topWizard.count }}회 출입)</p>
+            <p v-else>출입 기록 없음</p>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            let vm = Vue.createApp({
+                data() {
+                    return {
+                        name: '', // 입력한 마법사 이름
+                        library: [], // 현재 도서관에 출입 중인 마법사 목록
+                        visitHistory: {}, // 출입 횟수 기록
+                        isFullAlerted: false, // 5명 초과 시 경고가 이미 출력되었는지 여부
+                    };
+                },
+                created() {
+                    console.log('📚 도서관 관리 시스템 가동!');
+                },
+                mounted() {
+                    console.log('✅ 도서관 준비 완료!');
+                },
+                computed: {
+                    isFull() {
+                        return this.library.length >= 5;
+                    },
+                    topWizard() {
+                        let maxCount = 0;
+                        let topWizard = null;
+
+                        for (let wizard in this.visitHistory) {
+                            if (this.visitHistory[wizard] > maxCount) {
+                                maxCount = this.visitHistory[wizard];
+                                topWizard = wizard;
+                            }
+                        }
+
+                        return topWizard ? {name: topWizard, count: maxCount} : null;
+                    },
+                },
+                methods: {
+                    addEntry() {
+                        if (!this.name.trim()) {
+                            alert('⚠ 마법사 이름을 입력하세요!');
+                            return;
+                        }
+                        if (this.library.includes(this.name)) {
+                            alert(`⚠ ${this.name} 님은 이미 출입 중입니다!`);
+                            return;
+                        }
+                        if (this.isFull) {
+                            alert('⚠ 현재 도서관 인원 포화! 더 이상 출입할 수 없습니다.');
+                            return;
+                        }
+
+                        // 출입 기록 추가
+                        this.library.push(this.name);
+
+                        // 출입 횟수 증가
+                        this.visitHistory[this.name] = (this.visitHistory[this.name] || 0) + 1;
+
+                        // 입력창 초기화
+                        this.name = '';
+                    },
+                    removeEntry(index) {
+                        this.library.splice(index, 1);
+                    },
+                },
+                watch: {
+                    library(newVal) {
+                        if (newVal.length >= 5 && !this.isFullAlerted) {
+                            console.warn('⚠ 현재 도서관 인원 포화!');
+                            this.isFullAlerted = true;
+                        } else if (newVal.length < 5) {
+                            this.isFullAlerted = false;
+                        }
+                    },
+                },
+            }).mount('#app');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <button @click="addItem('지팡이', 100)">지팡이 추가</button>
+            <button @click="addItem('로브', 200)">로브 추가</button>
+            <button @click="addItem('부엉이', 300)">부엉이 추가</button> <br />
+
+            <h1>🛒 장바구니:</h1>
+            <ul>
+                <li v-for="(item, index) in cart" :key="index">
+                    {{ item.name }} ({{ item.price }}G)
+                    <button @click="removeItem(index)">삭제</button>
+                </li>
+            </ul>
+            <p>{{sumStatus}}</p>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            let vm = Vue.createApp({
+                name: 'App',
+                data() {
+                    return {
+                        cart: [], // 장바구니는 배열로
+                    };
+                },
+                methods: {
+                    addItem(name, price) {
+                        this.cart.push({name, price});
+                    },
+                    removeItem(index) {
+                        this.cart.splice(index, 1);
+                    },
+                },
+                computed: {
+                    sumStatus() {
+                        return '총 합계: ' + this.cart.reduce((sum, item) => sum + item.price, 0) + 'G';
+                    },
+                },
+            }).mount('#app');
+        </script>
+    </body>
+</html>
