@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      금액: <input type="text" v-model.number="amount" /> <br />
+      <!-- 로직 부분은 탬플릿이 아닌 스크립트 쪽에서 처리해주는 것이 좋다
+      또한 v-on은 @로 줄여서 쓸 수 있다 -->
+      <button @click="deposit">입금</button>
+      <button @click="withdraw">출금</button>
+      <br />
+      <h3>계좌 잔고: [{{ballance}}]</h3>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+
+        data() {
+          return {
+            amount: 0,
+            ballance: 0,
+          };
+        },
+
+        methods: {
+          deposit() {
+            console.log(typeof this.amount); //현재 타입이 무엇인지 확인할 수 있다.
+            let amt = parseInt(this.amount);
+            if (amt <= 0) {
+              alert('0보다 큰 값을 예금하라');
+            } else {
+              this.ballance += amt;
+            }
+          },
+
+          withdraw() {
+            console.log(typeof this.amount); //현재 타입이 무엇인지 확인할 수 있다.
+            let amt = parseInt(this.amount);
+            if (amt <= 0) {
+              alert('0보다 큰 값을 인출하라');
+            } else if (amt > this.ballance) {
+              alert('잔고보다 더 많은 금액은 인출할 수 없다');
+            } else {
+              this.ballance -= amt;
+            }
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

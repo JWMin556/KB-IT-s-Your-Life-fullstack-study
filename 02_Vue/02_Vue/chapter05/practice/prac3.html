@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      이름: <input type="text" v-model="name" /> <br />
+      출생 연도: <input type="number" v-model.number="birthday" /> <br />
+      <p v-if="!name || !birthday">조건을 충족해 주세요!</p>
+      <p v-else-if="old >= 19 || old < 11">⚠ 입학 대상 연령이 아닙니다</p>
+      <p v-else>{{name}}님은 {{dormitary}}에 배정되었습니다. (나이: {{old}})</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        data() {
+          return {
+            name: '',
+            birthday: '',
+            old: '',
+            dormitary: '',
+          };
+        },
+        watch: {
+          name(current, old) {
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            if (current && vowels.includes(current[0])) {
+              this.dormitary = '그리핀도르';
+            } else if (current && current.length >= 5) {
+              this.dormitary = '레번클로';
+            } else if (
+              current &&
+              (current[current.length - 1] === 'n' ||
+                current[current.length - 1] === 'ㄴ')
+            ) {
+              this.dormitary = '후플푸프';
+            } else {
+              this.dormitary = '슬리데린';
+            }
+          },
+          birthday(current, old) {
+            this.old = 2025 - current;
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

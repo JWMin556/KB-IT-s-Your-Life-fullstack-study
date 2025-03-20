@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="choice('엘더 지팡이')">엘더 지팡이</button>
+      <button @click="choice('단풍나무 지팡이')">단풍나무 지팡이</button>
+      <button @click="choice('딱총나무 지팡이')">딱총나무 지팡이</button>
+      <button @click="init">지팡이 초기화</button>
+
+      <p v-if="myWond && !sameWond">당신은 {{myWond}}를 선택했습니다.</p>
+      <p v-if="sameWond">
+        이미 {{myWond}}를 선택했습니다. 다른 지팡이를 선택해!
+      </p>
+      <p v-if="isInit">지팡이를 다시 선택해라</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        data() {
+          return {
+            myWond: '',
+            sameWond: false,
+            isInit: false,
+          };
+        },
+        methods: {
+          choice(wantedType) {
+            this.isInit = false;
+            if (wantedType === this.myWond) {
+              this.sameWond = true;
+            } else {
+              this.sameWond = false;
+              this.myWond = wantedType;
+            }
+          },
+          init() {
+            this.sameWond = false;
+            this.isInit = true;
+            this.myWond = '';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -33,6 +33,9 @@
             if (Number.isNaN(n)) return 0;
             return (n * (n + 1)) / 2;
           },
+          // crated: 만들어질 때 호출
+          // mounted: DOM 요소(html태그)에 데이터가 적용될때 호출
+          // updated: 데이터로 업뎃되었을 떄
         },
       }).mount('#app');
     </script>

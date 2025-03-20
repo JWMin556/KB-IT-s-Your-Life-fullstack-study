@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #duel-area {
+        width: 400px;
+        height: 400px;
+        border: 3px solid black;
+        position: relative;
+        margin-bottom: 10px;
+      }
+      #player {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      #opponent {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="duel-area">
+        <div id="player" @click="playerClick"></div>
+        <div id="opponent" @click="opponentClick"></div>
+        <p>{{battleStatus}}</p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            playerCount: 0,
+            opponentCount: 0,
+          };
+        },
+        methods: {
+          playerClick() {
+            console.log('🗡️내가 공격!');
+          },
+          opponentClick() {
+            console.log('🔥 상대가 반격!');
+          },
+        },
+        watch: {},
+        created() {
+          console.log('⚔️ 마법 결투 준비 완료!');
+        },
+        mounted() {
+          console.log('🏟 결투장이 열렸습니다.');
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      이름: <input type="text" v-model="name" /> <br />
+      나이: <input type="text" v-model.number="old" /> <br />
+      <button @click="submit">입학 승인</button>
+
+      <p v-if="nameLengthErr">이름은 두 글자 이상이어야 합니다.</p>
+      <p v-if="nameNumErr">이름에 숫자는 포함될 수 없습니다.</p>
+      <p v-if="ageErr">나이는 11세 이상 18세 이하만 입학 가능합니다.</p>
+
+      <p v-if="admissionMessage">{{ admissionMessage }}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        data() {
+          return {
+            name: '',
+            old: '',
+            nameNumErr: false,
+            nameLengthErr: false,
+            ageErr: false,
+            admissionMessage: '',
+          };
+        },
+        methods: {
+          submit() {
+            // 무조건 이렇게 초기화 해야 함
+            this.nameNumErr = false;
+            this.nameLengthErr = false;
+            this.ageErr = false;
+            this.admissionMessage = '';
+
+            // 이름 유효성 검사
+            if (this.name.length < 2) {
+              this.nameLengthErr = true;
+            }
+            if (/\d/.test(this.name)) {
+              this.nameNumErr = true;
+            }
+
+            // 나이 유효성 검사
+            if (this.old < 11 || this.old > 18) {
+              this.ageErr = true;
+            }
+
+            if (!this.nameLengthErr && !this.nameNumErr && !this.ageErr) {
+              // 모든 조건을 충족하면 입학 축하 메시지 출력
+              this.admissionMessage = `🎉 ${this.name}, ${this.old}세, 호그와트 입학을 축하합니다!`;
+            }
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

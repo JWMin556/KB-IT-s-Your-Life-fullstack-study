@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      마법 주문: <input type="text" v-model="word" @keyup.enter="submit" />
+      <br />
+      <p v-if="alreadymagic">
+        이미 발사한 주문입니다! 새로운 주문을 입력하세요.
+      </p>
+      <p v-if="rightMagic && !alreadymagic">
+        {{magic}} 발사! (지금까지 {{count}}회 발사함)
+      </p>
+      <p v-if="word === '' || word.length < 3">올바른 주문을 입력하세요!</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        data() {
+          return {
+            word: '',
+            magic: '',
+            rightMagic: false,
+            alreadymagic: false,
+            count: 0,
+          };
+        },
+        //@keyup.enter 이벤트를 Vue에서 사용할 때 computed 속성에 이벤트 핸들러를 넣은 것은 잘못된 방식
+        methods: {
+          submit() {
+            if (this.word === this.magic) {
+              this.alreadymagic = true;
+            } else {
+              this.magic = this.word;
+              this.alreadymagic = false;
+              this.rightMagic = true;
+              this.count++;
+            }
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
