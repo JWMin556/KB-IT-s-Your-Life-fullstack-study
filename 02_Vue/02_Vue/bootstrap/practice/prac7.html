@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <h1 class="mt-5 mb-3">7번 문제: 에티켓 점수판 & 자동 추천 항목(computed)</h1>
+
+                <button type="button" class="btn btn-success" @click="refresh">
+                    <i class="fa-solid fa-rotate"></i> 점수 새로 고침
+                </button>
+
+                <div v-for="(score, etiquette) in etiquetteScores" :key="etiquette">
+                    <p>⭐ {{ etiquette }}: {{ score }}점</p>
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            role="progressbar"
+                            :style="{ width: score + '%', backgroundColor: getColor(score) }"
+                        >
+                            {{ score }}%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body text-center">
+                        <h3>⭐ 오늘의 추천 실천 항목: {{ recommendedEtiquette.name }}</h3>
+                        <p>점수: {{ recommendedEtiquette.score }}점 - 꼭 실천해 보세요!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            let vm = Vue.createApp({
+                name: 'App',
+                data() {
+                    return {
+                        etiquetteScores: {
+                            '통화 자제': 0,
+                            '자리 양보': 0,
+                            '음식 금지': 0,
+                            '조용히 하기': 0,
+                        },
+                    };
+                },
+                methods: {
+                    refresh() {
+                        // 각 에티켓 항목의 점수를 0~100 사이 랜덤 값으로 갱신
+                        for (let key in this.etiquetteScores) {
+                            this.etiquetteScores[key] = Math.floor(Math.random() * 101);
+                        }
+                    },
+                    getColor(score) {
+                        if (score >= 80) return 'green';
+                        else if (score >= 50) return 'orange';
+                        else return 'red';
+                    },
+                },
+                computed: {
+                    recommendedEtiquette() {
+                        // 가장 점수가 높은 항목 찾기
+                        let maxKey = Object.keys(this.etiquetteScores).reduce((a, b) =>
+                            this.etiquetteScores[a] > this.etiquetteScores[b] ? a : b
+                        );
+                        return {name: maxKey, score: this.etiquetteScores[maxKey]};
+                    },
+                },
+                mounted() {
+                    this.refresh(); // 페이지 로드 시 초기 점수 설정
+                },
+            }).mount('#app');
+        </script>
+    </body>
+</html>
