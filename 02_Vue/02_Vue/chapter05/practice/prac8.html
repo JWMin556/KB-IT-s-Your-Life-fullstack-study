@@ -20,32 +20,29 @@
             <h2>📜 현재 도서관 출입 중 (최근 순):</h2>
             <ul>
                 <li v-for="(wizard, index) in library.slice().reverse()" :key="wizard">
-                    {{index + 1}}. {{ wizard }}
-                    <button @click="removeEntry(index)">퇴장</button>
+                    {{ index + 1 }}. {{ wizard }}
+                    <button @click="removeEntry(wizard)">퇴장</button>
                 </li>
             </ul>
 
             <h2>🔥 출입 횟수 통계:</h2>
-            <p v-if="topWizard">{{ topWizard.name }} ({{ topWizard.count }}회 출입)</p>
+            <ul>
+                <li v-for="(count, wizard) in visitHistory" :key="wizard">{{ wizard }} : {{ count }}회 출입</li>
+            </ul>
+            <p v-if="topWizard">가장 많이 출입한 마법사: {{ topWizard.name }} ({{ topWizard.count }}회)</p>
             <p v-else>출입 기록 없음</p>
         </div>
 
-        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue@3"></script>
         <script>
             let vm = Vue.createApp({
                 data() {
                     return {
-                        name: '', // 입력한 마법사 이름
-                        library: [], // 현재 도서관에 출입 중인 마법사 목록
-                        visitHistory: {}, // 출입 횟수 기록
-                        isFullAlerted: false, // 5명 초과 시 경고가 이미 출력되었는지 여부
+                        name: '',
+                        library: [],
+                        visitHistory: {},
+                        isFullAlerted: false,
                     };
-                },
-                created() {
-                    console.log('📚 도서관 관리 시스템 가동!');
-                },
-                mounted() {
-                    console.log('✅ 도서관 준비 완료!');
                 },
                 computed: {
                     isFull() {
@@ -61,46 +58,30 @@
                                 topWizard = wizard;
                             }
                         }
-
                         return topWizard ? {name: topWizard, count: maxCount} : null;
                     },
                 },
                 methods: {
                     addEntry() {
                         if (!this.name.trim()) {
-                            alert('⚠ 마법사 이름을 입력하세요!');
+                            console.log('⚠ 마법사 이름을 입력하세요!');
                             return;
                         }
                         if (this.library.includes(this.name)) {
-                            alert(`⚠ ${this.name} 님은 이미 출입 중입니다!`);
+                            console.log(`⚠ ${this.name} 은(는) 이미 출입 중입니다!`);
                             return;
                         }
                         if (this.isFull) {
-                            alert('⚠ 현재 도서관 인원 포화! 더 이상 출입할 수 없습니다.');
+                            console.log('⚠ 현재 도서관 인원 포화! 더 이상 출입할 수 없습니다.');
                             return;
                         }
 
-                        // 출입 기록 추가
                         this.library.push(this.name);
-
-                        // 출입 횟수 증가
                         this.visitHistory[this.name] = (this.visitHistory[this.name] || 0) + 1;
-
-                        // 입력창 초기화
                         this.name = '';
                     },
-                    removeEntry(index) {
-                        this.library.splice(index, 1);
-                    },
-                },
-                watch: {
-                    library(newVal) {
-                        if (newVal.length >= 5 && !this.isFullAlerted) {
-                            console.warn('⚠ 현재 도서관 인원 포화!');
-                            this.isFullAlerted = true;
-                        } else if (newVal.length < 5) {
-                            this.isFullAlerted = false;
-                        }
+                    removeEntry(wizard) {
+                        this.library = this.library.filter((w) => w !== wizard);
                     },
                 },
             }).mount('#app');
