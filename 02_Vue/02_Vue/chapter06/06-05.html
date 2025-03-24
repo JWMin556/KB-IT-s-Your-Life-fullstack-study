@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <style>
-            .buttonColor {
-                background-color: aqua;
-                color: black;
-            }
-            .buttonLayout {
-                text-align: center;
-                width: 120px;
-            }
-            .staticBorder {
-                border: khaki dashed 1px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="app">
-            <button class="staticBorder" :class="myColor">테스트 버튼</button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .buttonColor {
+        background-color: aqua;
+        color: black;
+      }
+      .buttonLayout {
+        text-align: center;
+        width: 120px;
+      }
+      .staticBorder {
+        border: khaki dashed 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- :이 붙으면 data쪽에서 찾아야 한다. class에 바인딩된 값은 css 선택자에서 찾으면 된다.-->
+      <button class="staticBorder" :class="myColor">테스트 버튼</button>
+    </div>
 
-        <script src="https://unpkg.com/vue"></script>
-        <script>
-            let vm = Vue.createApp({
-                name: 'App',
-                data() {
-                    return {
-                        myColor: 'buttonColor buttonLayout',
-                    };
-                },
-            }).mount('#app');
-        </script>
-    </body>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            myColor: 'buttonColor buttonLayout',
+            // 띄어쓰기로 연결되어있음. css와의 차이점이다. css는 띄어쓰기가 후손이지만,
+            // :class에서는 여러 개의 css클래스를 묶기 위해서 사용했을 뿐이다
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
 </html>

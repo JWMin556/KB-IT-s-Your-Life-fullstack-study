@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <div id="app">
-            <button :style="style1" @mouseover.stop="overEvent" @mouseout.stop="outEvent">테스트</button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 이처럼 :이라는 view문법을 쓰면 항상 data측을 봐야 한다 -->
+      <button
+        :style="style1"
+        @mouseover.stop="overEvent"
+        @mouseout.stop="outEvent"
+      >
+        <!-- out이벤트는 마우스에서 벗어났을 때 -->
+        <!-- 또한 stop 수식어는 부모로 이벤트 전달하는 버블링 방지 -->
+        테스트
+      </button>
+    </div>
 
-        <script src="https://unpkg.com/vue"></script>
-        <script>
-            let vm = Vue.createApp({
-                name: 'App',
-                data() {
-                    return {
-                        style1: {
-                            backgroundColor: 'aqua',
-                            color: 'black',
-                        },
-                    };
-                },
-                methods: {
-                    overEvent() {
-                        this.style1.backgroundColor = 'purple';
-                        this.style1.color = 'yellow';
-                    },
-                    outEvent() {
-                        this.style1.backgroundColor = 'aqua';
-                        this.style1.color = 'black';
-                    },
-                },
-            }).mount('#app');
-        </script>
-    </body>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            style1: {
+              backgroundColor: 'aqua',
+              color: 'black',
+            },
+          };
+        },
+        methods: {
+          overEvent() {
+            // this는 view에 있는 데이터들 찾아보기
+            this.style1.backgroundColor = 'purple';
+            this.style1.color = 'yellow';
+          },
+          outEvent() {
+            this.style1.backgroundColor = 'aqua';
+            this.style1.color = 'black';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
 </html>
