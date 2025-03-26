@@ -1,4 +1,5 @@
-import {createApp} from 'vue';
+// main.css가 전역 css로 여기에 선언
+import { createApp } from 'vue';
 import App from './App.vue';
 
 // Bootstrap 불러오기
