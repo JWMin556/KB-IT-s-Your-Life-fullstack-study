@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "감성 머그컵",
+    "price": 12000,
+    "image": "https://www.nordicnest.kr/assets/blobs/scandi-living-38-cl-white/47380-02_1_ProductImageMain-40205c2873.jpg?preset=tiny&dpr=2"
+  },
+  {
+    "id": 2,
+    "name": "빈티지 캔들",
+    "price": 18000,
+    "image": "https://cafe24.poxo.com/ec01/chogayeon/5GslpdAnCPzGTb8GqqEZ3hDSxYLgxDiCWMTA4YV2oSRvlzjA4UNhhxN/0r6NIgKGsCuukP4HbZMW+HvdPYCeMQ==/_/web/product/big/202307/e03086cef9a5e453dc1be81d0ebf61b0.jpg"
+  },
+  {
+    "id": 3,
+    "name": "미니 가습기",
+    "price": 25000,
+    "image": "https://mstatic1.e-himart.co.kr/contents/content/upload/golfMagazine/20221123/268069/thumbnail_750_magazine_7340.png"
+  },
+  {
+    "id": 4,
+    "name": "무선 키보드",
+    "price": 42000,
+    "image": "https://godomall.speedycdn.net/459016870fd2f31463cab2e8092f5b5f/goods/1000000293/image/detail/register_detail_097.jpg"
+  },
+  {
+    "id": 5,
+    "name": "LED 조명 거울",
+    "price": 33000,
+    "image": "https://lampland.co.kr/web/product/extra/big/202307/991d1592fa6d4ceeb72fdc847ebcd5b6.jpg"
+  },
+  {
+    "id": 6,
+    "name": "수면 안대",
+    "price": 7000,
+    "image": "https://contents.kyobobook.co.kr/sih/fit-in/400x0/gift/pdt/1656/hot1732685840440.jpg"
+  },
+  {
+    "id": 7,
+    "name": "커피 원두 세트",
+    "price": 28000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9SRiaxpnAjDx1QU9Bg_p3WJSbho8E4aSiw&s"
+  },
+  {
+    "id": 8,
+    "name": "아로마 디퓨저",
+    "price": 23000,
+    "image": "https://i.namu.wiki/i/1-OBWHrE1xh7ZmLspsrX36EFlwTlMfnrqCdyJ5HfJEP9lDVs0D0BIfsIegcBwVxzHVV-krsugP311PrB3VfHkg.webp"
+  },
+  {
+    "id": 9,
+    "name": "무드등 스피커",
+    "price": 39000,
+    "image": "https://m.funlighting.co.kr/web/product/big/202110/7dcdbbf049cb82f779ab4207a4ca4711.jpg"
+  },
+  {
+    "id": 10,
+    "name": "포스터 캘린더",
+    "price": 11000,
+    "image": "https://thumbnail.10x10.co.kr/webimage/image/basic600/517/B005171617-1.jpg?cmd=thumb&w=400&h=400&fit=true&ws=false"
+  },
+  {
+    "id": 11,
+    "name": "북유럽 스타일 쿠션",
+    "price": 16000,
+    "image": "https://image.hanssem.com/hsimg/gds/550/935/935383_A1.jpg?v=20220713234434"
+  },
+  {
+    "id": 12,
+    "name": "접이식 노트북 거치대",
+    "price": 27000,
+    "image": "https://1801889e95b1f9bf.kinxzone.com/webfile/product/8/8240/0154bk6eggx1.jpg"
+  },
+  {
+    "id": 13,
+    "name": "USB 미니 선풍기",
+    "price": 15000,
+    "image": "https://giftinfo.co.kr/shop/item_images/zoom1/685504.jpg"
+  },
+  {
+    "id": 14,
+    "name": "디지털 타이머 시계",
+    "price": 21000,
+    "image": "https://thumbnail.10x10.co.kr/webimage/image/basic600/326/B003263095.jpg?cmd=thumb&w=400&h=400&fit=true&ws=false"
+  }
+]
