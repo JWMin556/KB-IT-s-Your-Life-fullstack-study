@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "이웃집 토토로",
+      "year": 1988,
+      "director": "미야자키 하야오",
+      "description": "자연과 조화롭게 살아가는 두 자매가 숲의 정령 '토토로'와 만나며 벌어지는 따뜻한 이야기. 현실과 환상이 조화롭게 어우러진 지브리 대표작.",
+      "poster": "https://image.dongascience.com/Photo/2017/06/14975782208217.jpg"
+    },
+    {
+      "id": 2,
+      "title": "센과 치히로의 행방불명",
+      "year": 2001,
+      "director": "미야자키 하야오",
+      "description": "현실 세계에서 신들의 세계로 빠져든 소녀 치히로가 부모를 구하기 위해 성장하는 여정을 담은 판타지 모험 영화. 아카데미 수상작.",
+      "poster": "https://an2-img.amz.wtchn.net/image/v2/6gyX67_I5PHfYemQIUCw5A.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZNE1qVTFOamt6TXpBME1ESXpNems0TWlKOS5UNm1iUEczZjQ0QWYzY0t3cmJ2ZjZvbUZMNlNldnVETmJUX29XVHVTUVhJ"
+    },
+    {
+      "id": 3,
+      "title": "하울의 움직이는 성",
+      "year": 2004,
+      "director": "미야자키 하야오",
+      "description": "노파로 변해버린 소녀 소피가 마법사 하울과 함께 전쟁과 저주를 극복해 나가는 환상적인 이야기. 사랑과 자유, 자아를 주제로 함.",
+      "poster": "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/c6Ad/image/nqyWegzq2oBYgABzbz-3oFqVoSg.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "마녀 배달부 키키",
+      "year": 1989,
+      "director": "미야자키 하야오",
+      "description": "13살 마녀 키키가 홀로 도시로 나가 자립해가는 이야기. 성장, 독립, 자아를 그린 지브리의 대표적인 청춘 성장기.",
+      "poster": "https://cinelab.co.kr/upload/1617691891416_%EB%B9%97%EC%9E%90%EB%A3%A8.jpg"
+    },
+    {
+      "id": 5,
+      "title": "바람이 분다",
+      "year": 2013,
+      "director": "미야자키 하야오",
+      "description": "비행기를 사랑했던 지로가 제로 전투기를 설계하며 겪는 삶과 사랑, 꿈과 전쟁의 경계를 그린 작품. 미야자키 하야오의 마지막 작품으로 알려졌던 감성작.",
+      "poster": "https://ojsfile.ohmynews.com/STD_IMG_FILE/2013/0816/IE001611647_STD.jpg"
+    },
+    {
+      "id": 6,
+      "title": "붉은 돼지",
+      "year": 1992,
+      "director": "미야자키 하야오",
+      "description": "1차 세계대전 이후 이탈리아 하늘을 누비는 전직 전투기 조종사 '포르코 로쏘'의 이야기. 인간성과 자존심을 날개에 실은 지브리의 명작.",
+      "poster": "https://i.namu.wiki/i/rX7A-XD747Sv4okz3812JO-O44o75vrXVp71V2CGbQqKD-YIka_eXmhmSGzivKuAW6yplU1ElFLF9O5MnyXvqQ.webp"
+    },
+    {
+      "id": 7,
+      "title": "모노노케 히메",
+      "year": 1997,
+      "director": "미야자키 하야오",
+      "description": "신과 인간, 자연과 문명의 충돌을 그린 대서사시. 인간의 욕망과 자연의 질서를 다룬 철학적인 메시지가 담긴 작품.",
+      "poster": "https://scs-phinf.pstatic.net/MjAyMzEyMjZfMjcz/MDAxNzAzNTUwMTE3ODQ0.2ke3uKay8n6CSfeh8ceKe8Yzv7nAI7I1oIsyUrG8f0Ug.u_0F3uiEFMxBxULtVHPdKhA7U_cUfDAKj-VM21-b6Ssg.JPEG/Cover.jpg?type=nfs670_440"
+    },
+    {
+      "id": 8,
+      "title": "천공의 성 라퓨타",
+      "year": 1986,
+      "director": "미야자키 하야오",
+      "description": "하늘을 나는 섬 '라퓨타'를 둘러싼 소년과 소녀의 모험. 스팀펑크 감성과 지브리 특유의 세계관이 결합된 초기 대표작.",
+      "poster": "https://mblogthumb-phinf.pstatic.net/MjAyMzA5MDZfMTUx/MDAxNjkzOTg1NDIzNzgz.mdJtSnKaVMSLc7kinalFIhoaI-RUNYHeeCa3l_5t1dQg.NWSNOiCJwwJ0CLeohCAjiqp-eBk4kSGYPOsd2S7BAi4g.JPEG.uncledison/%EC%B2%9C%EA%B3%B5%EC%9D%98_%EC%84%B1_%EB%9D%BC%ED%93%A8%ED%83%80_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_36.jpg?type=w800"
+    },
+    {
+      "id": 9,
+      "title": "고양이의 보은",
+      "year": 2002,
+      "director": "모리타 히로유키",
+      "description": "고양이 왕국에 납치된 소녀 하루의 모험. 가벼운 분위기와 귀여운 캐릭터로 많은 사랑을 받은 작품.",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL_l82uGLyBx12p12QqHTJV8I2KGOmyIFMWw&s"
+    },
+    {
+      "id": 10,
+      "title": "벼랑 위의 포뇨",
+      "year": 2008,
+      "director": "미야자키 하야오",
+      "description": "물고기 소녀 포뇨가 인간 소년 소스케를 만나며 벌어지는 사랑과 변화의 이야기. 순수한 시선으로 자연과 사랑을 그린 동화 같은 작품.",
+      "poster": "https://i.namu.wiki/i/nbQNxmblTZSSTeTmHaQ0iWI56L1eJRUkGD0JM4_rRNfzUaumtEQi_A7sI878s1j0Ovw67A9LLRtGRzsV4Qpxvw.webp"
+    }
+  ]
+}
