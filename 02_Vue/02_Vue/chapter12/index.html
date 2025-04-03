@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지갑 애니메이션</title>
+    <style>
+      /* 지갑 스타일 */
+      .wallet {
+        width: 200px;
+        height: 100px;
+        background-color: brown;
+        border-radius: 10px;
+        position: relative;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+
+      /* 돈 스타일 */
+      .money {
+        width: 30px;
+        height: 10px;
+        background-color: gold;
+        position: absolute;
+        bottom: 10px;
+        animation: moneyAnimation 3s infinite;
+        border-radius: 5px;
+      }
+
+      /* 돈이 쌓이는 애니메이션 */
+      @keyframes moneyAnimation {
+        0% {
+          bottom: -30px;
+          opacity: 0;
+        }
+        50% {
+          bottom: 20px;
+          opacity: 1;
+        }
+        100% {
+          bottom: 10px;
+          opacity: 0;
+        }
+      }
+
+      /* 돈이 쌓이고 사라지는 효과 */
+      .money:nth-child(odd) {
+        animation-delay: 0.5s;
+      }
+
+      .money:nth-child(even) {
+        animation-delay: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wallet">
+      <div class="money"></div>
+      <div class="money"></div>
+      <div class="money"></div>
+      <div class="money"></div>
+    </div>
+  </body>
+</html>
