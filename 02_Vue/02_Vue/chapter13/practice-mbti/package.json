@@ -1,5 +1,5 @@
 {
-  "name": "todolist-app-router",
+  "name": "practice-mbti",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.4",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
-    "vue-csspin": "^0.1.12",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {

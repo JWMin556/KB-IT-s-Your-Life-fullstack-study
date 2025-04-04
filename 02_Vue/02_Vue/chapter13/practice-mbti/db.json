@@ -1,0 +1,957 @@
+{
+  "matches": [
+    {
+      "id": 1,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ENFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 2,
+      "myMBTI": "ESFP",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 3,
+      "myMBTI": "INTJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 4,
+      "myMBTI": "INTP",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 5,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 6,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ESFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 7,
+      "myMBTI": "INFP",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 8,
+      "myMBTI": "ESTP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 9,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ISTJ",
+      "result": "궁합이 낮은 편이에요. 많은 배려와 이해가 필요할 수 있어요.",
+      "compatibility": 37
+    },
+    {
+      "id": 10,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 11,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ENTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 12,
+      "myMBTI": "ESFP",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 13,
+      "myMBTI": "ISFJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 14,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 15,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 16,
+      "myMBTI": "INFP",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 17,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 18,
+      "myMBTI": "INFJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 19,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 20,
+      "myMBTI": "ESFP",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 21,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 22,
+      "myMBTI": "INTP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 23,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "INTP",
+      "result": "성격 차이가 큰 조합이에요. 서로를 이해하려는 노력이 필요해요.",
+      "compatibility": 41
+    },
+    {
+      "id": 24,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ISFP",
+      "result": "성격 차이가 큰 조합이에요. 서로를 이해하려는 노력이 필요해요.",
+      "compatibility": 44
+    },
+    {
+      "id": 25,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 26,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 27,
+      "myMBTI": "ESTP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 28,
+      "myMBTI": "INFJ",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 29,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ESFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 30,
+      "myMBTI": "ENTP",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 31,
+      "myMBTI": "INTJ",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 32,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 33,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 34,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 35,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ENTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 36,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 37,
+      "myMBTI": "INFJ",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 38,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 39,
+      "myMBTI": "ENFP",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 40,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ENFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 41,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ESFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 42,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 43,
+      "myMBTI": "INTP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 44,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 45,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ENTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 46,
+      "myMBTI": "ENFP",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 47,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 48,
+      "myMBTI": "ENTP",
+      "friendMBTI": "INTJ",
+      "result": "매우 잘 맞는 편! 서로를 배려하면 멋진 관계로 발전할 수 있어요.",
+      "compatibility": 89
+    },
+    {
+      "id": 49,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ISFJ",
+      "result": "성격 차이가 큰 조합이에요. 서로를 이해하려는 노력이 필요해요.",
+      "compatibility": 45
+    },
+    {
+      "id": 50,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 51,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ISTP",
+      "result": "성격 차이가 큰 조합이에요. 서로를 이해하려는 노력이 필요해요.",
+      "compatibility": 43
+    },
+    {
+      "id": 52,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ENTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 53,
+      "myMBTI": "ESTP",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 54,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "INFP",
+      "result": "궁합이 낮은 편이에요. 많은 배려와 이해가 필요할 수 있어요.",
+      "compatibility": 38
+    },
+    {
+      "id": 55,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 56,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 57,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 58,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 59,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 60,
+      "myMBTI": "ESTP",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 61,
+      "myMBTI": "INFP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 62,
+      "myMBTI": "ESTP",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 63,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 64,
+      "myMBTI": "INTJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 65,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "INFP",
+      "result": "찰떡궁합! 서로를 완벽하게 이해할 수 있는 최고의 조합이에요.",
+      "compatibility": 94
+    },
+    {
+      "id": 66,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 67,
+      "myMBTI": "ISTJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 68,
+      "myMBTI": "INTP",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 69,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "INTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 70,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 71,
+      "myMBTI": "ISFP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 72,
+      "myMBTI": "ESTP",
+      "friendMBTI": "INFJ",
+      "result": "궁합이 낮은 편이에요. 많은 배려와 이해가 필요할 수 있어요.",
+      "compatibility": 36
+    },
+    {
+      "id": 73,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 74,
+      "myMBTI": "ESFP",
+      "friendMBTI": "INTJ",
+      "result": "성격 차이가 큰 조합이에요. 서로를 이해하려는 노력이 필요해요.",
+      "compatibility": 42
+    },
+    {
+      "id": 75,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ISFJ",
+      "result": "찰떡궁합! 서로를 완벽하게 이해할 수 있는 최고의 조합이에요.",
+      "compatibility": 90
+    },
+    {
+      "id": 76,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ENTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 77,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "INFP",
+      "result": "매우 잘 맞는 편! 서로를 배려하면 멋진 관계로 발전할 수 있어요.",
+      "compatibility": 88
+    },
+    {
+      "id": 78,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 79,
+      "myMBTI": "INFP",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 80,
+      "myMBTI": "INFP",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 81,
+      "myMBTI": "ISFJ",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 82,
+      "myMBTI": "INFJ",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 83,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ESFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 84,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 85,
+      "myMBTI": "INFJ",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 86,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ENTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 87,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 88,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 89,
+      "myMBTI": "ISTJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 90,
+      "myMBTI": "INTJ",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 91,
+      "myMBTI": "ENFP",
+      "friendMBTI": "INFJ",
+      "result": "찰떡궁합! 서로를 완벽하게 이해할 수 있는 최고의 조합이에요.",
+      "compatibility": 96
+    },
+    {
+      "id": 92,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 93,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 94,
+      "myMBTI": "ISFJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 95,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 96,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 97,
+      "myMBTI": "INFP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 98,
+      "myMBTI": "INFJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 99,
+      "myMBTI": "INFJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 100,
+      "myMBTI": "INTJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 101,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 102,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 103,
+      "myMBTI": "ISFP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 104,
+      "myMBTI": "ENFP",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 105,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 106,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 107,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ISTP",
+      "result": "매우 잘 맞는 편! 서로를 배려하면 멋진 관계로 발전할 수 있어요.",
+      "compatibility": 85
+    },
+    {
+      "id": 108,
+      "myMBTI": "ESTP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 109,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 110,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 111,
+      "myMBTI": "ENTP",
+      "friendMBTI": "INTP",
+      "result": "찰떡궁합! 서로를 완벽하게 이해할 수 있는 최고의 조합이에요.",
+      "compatibility": 92
+    },
+    {
+      "id": 112,
+      "myMBTI": "ENFP",
+      "friendMBTI": "ENFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 113,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 114,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 115,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ISFP",
+      "result": "찰떡궁합! 서로를 완벽하게 이해할 수 있는 최고의 조합이에요.",
+      "compatibility": 91
+    },
+    {
+      "id": 116,
+      "myMBTI": "INFP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 117,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 118,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "ESFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 119,
+      "myMBTI": "ESTJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 120,
+      "myMBTI": "ENTP",
+      "friendMBTI": "INFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 121,
+      "myMBTI": "INTJ",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 122,
+      "myMBTI": "ENTJ",
+      "friendMBTI": "INFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 123,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ESTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 124,
+      "myMBTI": "ISFP",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 125,
+      "myMBTI": "INTP",
+      "friendMBTI": "ISFP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 126,
+      "myMBTI": "ESTP",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 127,
+      "myMBTI": "ESTP",
+      "friendMBTI": "ISFJ",
+      "result": "매우 잘 맞는 편! 서로를 배려하면 멋진 관계로 발전할 수 있어요.",
+      "compatibility": 87
+    },
+    {
+      "id": 128,
+      "myMBTI": "ENTP",
+      "friendMBTI": "ENTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 129,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ESFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 130,
+      "myMBTI": "ISTP",
+      "friendMBTI": "ISTP",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 131,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "INTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 132,
+      "myMBTI": "ENFJ",
+      "friendMBTI": "ISFJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 133,
+      "myMBTI": "ISFJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 134,
+      "myMBTI": "ESFJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 135,
+      "myMBTI": "INFJ",
+      "friendMBTI": "ISTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    },
+    {
+      "id": 136,
+      "myMBTI": "ESFP",
+      "friendMBTI": "ESTJ",
+      "result": "잘 맞는 편은 아니지만, 노력 여하에 따라 관계가 달라질 수 있어요.",
+      "compatibility": 50
+    }
+  ],
+  "savedResults": []
+}

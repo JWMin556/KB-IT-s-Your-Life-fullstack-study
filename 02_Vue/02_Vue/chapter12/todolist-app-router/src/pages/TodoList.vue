@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col p-3">
       <router-link class="btn btn-primary" to="/todos/add">
         할일 추가
@@ -18,9 +18,9 @@
         수 없다
       </ul>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <div class="row">
+  <div class="row">
     <div class="col p-3">
       <router-link class="btn btn-primary" to="/todos/add">
         할일 추가
@@ -42,13 +42,13 @@
         />
       </ul>
     </div>
-  </div> -->
+  </div>
 </template>
 <script setup>
 import { inject } from 'vue';
 import TodoItem from '@/components/TodoItem.vue';
 const todoList = inject('todoList');
-// const { fetchTodoList } = inject('actions');
+const { fetchTodoList } = inject('actions');
 </script>
 
 <style scoped></style>
