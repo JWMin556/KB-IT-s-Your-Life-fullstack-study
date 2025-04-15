@@ -16,15 +16,17 @@ public class FourthPractice {
             String strNum = sc.nextLine();
             if (strNum.equals("1")) {
                 System.out.print("예금액> ");
-                String strMoney = sc.nextLine();
-                money += Integer.parseInt(strMoney);
+                int strMoney = sc.nextInt();
+                sc.nextLine();  // 개행 문자 제거
+                money += strMoney;
             } else if (strNum.equals("2")) {
                 System.out.print("출금액> ");
-                String outMoney = sc.nextLine();
-                if (money < Integer.parseInt(outMoney)) {
+                int outMoney = sc.nextInt();
+                sc.nextLine();  // 개행 문자 제거
+                if (money < outMoney) {
                     System.out.println("잔고가 부족합니다");
                 } else {
-                    money -= Integer.parseInt(outMoney);
+                    money -= outMoney;
                 }
             } else if (strNum.equals("3")) {
                 System.out.println("잔고> " + money);

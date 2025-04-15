@@ -15,16 +15,18 @@ public class FifthPractice {
             String strNum = sc.nextLine();
             if (strNum.equals("1")) {
                 System.out.print("학생수> ");
-                String strStudentCount = sc.nextLine();
-                scores = new int[Integer.parseInt(strStudentCount)];
+                int studentCount = sc.nextInt();
+                sc.nextLine();  // 개행 문자 제거
+                scores = new int[studentCount];
             } else if (strNum.equals("2")) {
                 if (scores.length == 0) {
                     System.out.println("학생수를 먼저 입력해줘!");
                 } else {
                     for (int i = 0; i < scores.length; i++) {
                         System.out.print("scores[" + i + "]>");
-                        String scoreStr = sc.nextLine();
-                        scores[i] = Integer.parseInt(scoreStr);
+                        int score = sc.nextInt();
+                        sc.nextLine();  // 개행 문자 제거
+                        scores[i] = score;
                     }
                 }
             } else if (strNum.equals("3")) {
