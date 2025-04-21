@@ -17,14 +17,14 @@ public class Audio implements RemoteControl{
     //setVolume() 추상 메소드 오버라이딩
     @Override
     public void setVolume(int volume) {
-        if(volume>RemoteControl.MAX_VOLUME) {
+        if(volume > RemoteControl.MAX_VOLUME) {
             this.volume = RemoteControl.MAX_VOLUME;
-        } else if(volume<RemoteControl.MIN_VOLUME) {
+        } else if (volume < RemoteControl.MIN_VOLUME) {
             this.volume = RemoteControl.MIN_VOLUME;
         } else {
             this.volume = volume;
         }
-        System.out.println("현재 Audio 볼륨: " + volume);
+        System.out.println("현재 Audio 볼륨: " + this.volume);
     }
 
 }
