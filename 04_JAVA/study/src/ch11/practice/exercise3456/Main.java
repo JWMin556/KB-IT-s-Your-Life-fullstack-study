@@ -49,12 +49,14 @@ public class Main {
                 System.out.println("[셔플 후 참가자 명단]");
                 maleGame.shuffle();
                 maleGame.printCandidates();
+                maleGame.playGame();
             } else if (gender.getGender() == 2) {
                 FemaleMatchGame femaleGame = new FemaleMatchGame(femaleCelebs);
                 femaleGame.printCandidates();
                 System.out.println("[셔플 후 참가자 명단]");
                 femaleGame.shuffle();
                 femaleGame.printCandidates();
+                femaleGame.playGame();
             }
         } catch (InvalidGenderException e) {
             System.out.println(">>" + e.getMessage());

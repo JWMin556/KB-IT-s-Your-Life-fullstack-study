@@ -44,6 +44,7 @@ public abstract class MatchGame implements VsSelectable {
                 System.out.println("잘못된 입력입니다! 1 또는 2만 입력하세요.");
             }
         }
+        System.out.println("[" + winner.getName() + " 승리!]");
         return winner;
     }
 }
