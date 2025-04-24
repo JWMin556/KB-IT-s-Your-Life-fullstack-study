@@ -1,4 +1,4 @@
-package ch11.practice.exercise3456;
+package ch11.practice.exercise34567;
 
 import ch11.practice.exercise2.FemaleCelebrity;
 import ch11.practice.exercise2.InvalidNameException;
