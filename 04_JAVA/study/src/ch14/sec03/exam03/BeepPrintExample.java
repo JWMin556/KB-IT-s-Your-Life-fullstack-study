@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class BeepPrintExample {
     public static void main(String[] args) {
-        Thread thread = new Thread() {
+        Thread thread = new Thread() {  // Thread 클래스 직접 상속한 익명 객체
             public void run() {
                 Toolkit toolkit = Toolkit.getDefaultToolkit();
                 for(int i=0; i<5; i++) {

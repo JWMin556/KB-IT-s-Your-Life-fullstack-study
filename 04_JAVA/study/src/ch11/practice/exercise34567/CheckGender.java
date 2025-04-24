@@ -1,4 +1,4 @@
-package ch11.practice.exercise3456;
+package ch11.practice.exercise34567;
 
 public class CheckGender {
     private int gender;

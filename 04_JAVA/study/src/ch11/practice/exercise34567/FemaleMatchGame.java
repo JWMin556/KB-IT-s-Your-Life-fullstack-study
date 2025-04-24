@@ -1,4 +1,4 @@
-package ch11.practice.exercise3456;
+package ch11.practice.exercise34567;
 
 import ch11.practice.exercise2.Celebrity;
 
@@ -7,9 +7,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class MaleMatchGame extends MatchGame {
+public class FemaleMatchGame extends MatchGame {
     private Celebrity[] inputCelebrities;
-    public MaleMatchGame(Celebrity[] celebrityList) {
+    public FemaleMatchGame(Celebrity[] celebrityList) {
         this.inputCelebrities = celebrityList;
         initializeCandidates();
     }
@@ -74,7 +74,7 @@ public class MaleMatchGame extends MatchGame {
 
     @Override
     public void printCandidates() {
-        System.out.println("[남자 연예인 월드컵 참가자 명단]");
+        System.out.println("[여자 연예인 월드컵 참가자 명단]");
         super.printCandidates();
     }
 }
