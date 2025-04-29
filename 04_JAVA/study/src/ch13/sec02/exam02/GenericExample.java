@@ -5,7 +5,9 @@ public class GenericExample {
         HomeAgency homeAgency = new HomeAgency();
         Home home = homeAgency.rent();
         home.turnOnLight();
+
         CarAgency carAgency = new CarAgency();
+        // 제네릭 인터페이스를 통해 리턴 타입을 고정했다.
         Car car = carAgency.rent();
         car.run();
     }
