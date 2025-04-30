@@ -5,16 +5,14 @@ import java.util.Queue;
 
 public class QueueExample {
     public static void main(String[] args) {
-        //Queue 컬렉션 생성
         Queue<Message> messageQueue = new LinkedList<>();
-        //메시지 넣기
+
         messageQueue.offer(new Message("sendMail", "홍길동"));
         messageQueue.offer(new Message("sendSMS", "신용권"));
         messageQueue.offer(new Message("sendKakaotalk", "감자바"));
 
-        //메시지를 하나씩 꺼내어 처리
         while(!messageQueue.isEmpty()) {
-            Message message = messageQueue.poll();
+            Message message = messageQueue.poll();  // poll메서드: 도착한 순서대로 뽑는다. 
             switch(message.command) {
                 case "sendMail":
                     System.out.println(message.to + "님에게 메일을 보냅니다.");

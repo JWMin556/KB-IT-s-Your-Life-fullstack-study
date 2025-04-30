@@ -1,20 +1,21 @@
 package ch15.sec03.exam02;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Member {
     public String name;
     public int age;
 
-    public Member(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    //hashCode 재정의
     @Override
     public int hashCode() {
         return name.hashCode() + age;
     }
-    //equals 재정의
+
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Member target) {

@@ -7,15 +7,18 @@ public class ImmutableExample {
         //List 불변 컬렉션 생성
         List<String> immutableList1 = List.of("A", "B", "C");
         //immutableList1.add("D"); (x)
+
         //Set 불변 컬렉션 생성
         Set<String> immutableSet1 = Set.of("A", "B", "C");
         //immutableSet1.remove("A"); (x)
+
         //Map 불변 컬렉션 생성
         Map<Integer, String> immutableMap1 = Map.of(
                 1, "A",
                 2, "B",
                 3, "C"
         );
+
         //immutableMap1.put(4, "D"); (x)
 
         //List 컬렉션을 불변 컬렉션으로 복사

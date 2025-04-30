@@ -6,9 +6,8 @@ import java.util.Map;
 
 public class SynchronizedMapExample {
     public static void main(String[] args) {
-        //Map 컬렉션 생성
         Map<Integer, String> map = Collections.synchronizedMap(new HashMap<>());
-        //작업 스레드 객체 생성
+
         Thread threadA = new Thread() {
             @Override
             public void run() {
@@ -19,7 +18,6 @@ public class SynchronizedMapExample {
             }
         };
 
-        //작업 스레드 객체 생성
         Thread threadB = new Thread() {
             @Override
             public void run() {
@@ -29,17 +27,16 @@ public class SynchronizedMapExample {
                 }
             }
         };
-        //작업 스레드 실행
         threadA.start();
         threadB.start();
 
-        //작업스레드들이모두종료될때까지메인스레드를기다리게함
         try {
             threadA.join();
             threadB.join();
         } catch(Exception e) {
+            e.printStackTrace();
         }
-        //저장된총객체수얻기
+        
         int size = map.size();
         System.out.println("총객체수: " + size);
         System.out.println();
