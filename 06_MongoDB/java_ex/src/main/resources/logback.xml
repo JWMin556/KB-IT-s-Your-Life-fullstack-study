@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %-4relative [%thread] %-5level %logger{30} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <logger name="org.mongodb.driver.connection" level="INFO" additivity="true"/>
+<!--    MongoDB 드라이버의 로그 레벨을 INFO로 설정-->
+<!--    상세: TRACE - DEBUG - INFO - WARN - ERROR-->
+<!--    INFO 설정 시, 그렇기에 INFO -> WARN -> ERROR가 출력됨-->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
