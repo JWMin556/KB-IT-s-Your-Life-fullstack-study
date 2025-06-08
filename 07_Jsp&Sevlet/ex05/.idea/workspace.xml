@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bc28c83-d2f3-464d-85e9-82bebfeec4b4" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/CharacterEncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/JstlServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/RequestRedirectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/RequestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/ResetServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/ResponseRedirectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/ScopeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/VoteFormServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/VoteSubmitServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/ex05/domain/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jstl_ex.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/redirect_res.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/res.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scope.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/vote_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/vote_result.jsp" afterDir="false" />
+    <list default="true" id="1bc28c83-d2f3-464d-85e9-82bebfeec4b4" name="변경" comment="6월 4일 실습">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JWMin556"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JWMin556&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JWMin556/KB-IT-s-Your-Life-fullstack-study.git",
-    "accountId": "557db782-4cfd-4ca6-a5df-fe3c7d1f924c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JWMin556/KB-IT-s-Your-Life-fullstack-study.git&quot;,
+    &quot;accountId&quot;: &quot;557db782-4cfd-4ca6-a5df-fe3c7d1f924c&quot;
   }
-}]]></component>
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -68,31 +48,31 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2y1M5C2WKfXoiWHFU4BuPXtHZf4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ex05 빌드.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat 서버.Tomcat 9.0.1051.executor": "Run",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ex05 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat 서버.Tomcat 9.0.1051.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.1051" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.1051" ALTERNATIVE_JRE_ENABLED="false">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -198,11 +178,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748997441031</updated>
-      <workItem from="1748997442389" duration="16276000" />
+      <workItem from="1748997442389" duration="16534000" />
+      <workItem from="1749025209532" duration="438000" />
+      <workItem from="1749426809450" duration="6000" />
     </task>
+    <task id="LOCAL-00001" summary="6월 4일 실습">
+      <option name="closed" value="true" />
+      <created>1749023179354</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749023179354</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="세션 실습 6월 2일" />
+    <MESSAGE value="6월 4일 실습" />
+    <option name="LAST_COMMIT_MESSAGE" value="6월 4일 실습" />
   </component>
 </project>
