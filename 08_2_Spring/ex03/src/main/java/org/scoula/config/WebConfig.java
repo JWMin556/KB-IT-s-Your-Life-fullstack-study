@@ -11,9 +11,9 @@ import javax.servlet.ServletRegistration;
 //Tomcat에게 알리는 용도 (기존의 Web.xml을 대체한다)
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     final String LOCATION = "c:/upload";
-    final long MAX_FILE_SIZE = 1024 * 1024 * 10L;
-    final long MAX_REQUEST_SIZE = 1024 * 1024 *20L;
-    final int FILE_SIZE_THRESHOLD = 1024 * 1024 * 5;;
+    final long MAX_FILE_SIZE = 1024 * 1024 * 10L; // 10M
+    final long MAX_REQUEST_SIZE = 1024 * 1024 *20L; // 20M
+    final int FILE_SIZE_THRESHOLD = 1024 * 1024 * 5;  //5M
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -42,13 +42,10 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
         registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
-        MultipartConfigElement multipartConfig =
-                new MultipartConfigElement(
-                        LOCATION, // 업로드처리디렉토리경로
-                        MAX_FILE_SIZE, // 업로드가능한파일하나의최대크기
-                        MAX_REQUEST_SIZE, //업로드가능한전체최대크기(여러파일업로드하는경우)
-                        FILE_SIZE_THRESHOLD // 메모리파일의최대크기(이보다작으면실제메모리에서만작업)
-                );
+
+        MultipartConfigElement multipartConfig = new MultipartConfigElement(
+                LOCATION, MAX_REQUEST_SIZE, MAX_FILE_SIZE, FILE_SIZE_THRESHOLD
+        );
         registration.setMultipartConfig(multipartConfig);
     }
 }

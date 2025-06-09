@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.scoula.exception" ,"org.scoula.controller"})
+@ComponentScan(basePackages = {"org.scoula.controller", "org.scoula.exception" ,"org.scoula.ex03.controller"})
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override
@@ -36,7 +36,8 @@ public class ServletConfig implements WebMvcConfigurer {
 
     @Bean
     public MultipartResolver multipartResolver() {
-        StandardServletMultipartResolver resolver = new StandardServletMultipartResolver();
+        StandardServletMultipartResolver resolver
+                = new StandardServletMultipartResolver();
         return resolver;
     }
 }
