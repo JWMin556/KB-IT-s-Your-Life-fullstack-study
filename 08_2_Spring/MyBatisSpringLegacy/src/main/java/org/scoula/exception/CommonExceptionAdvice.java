@@ -27,6 +27,6 @@ public class CommonExceptionAdvice {
     public String handle404(NoHandlerFoundException ex, HttpServletRequest request, Model model){
         log.error(ex);
         model.addAttribute("uri",request.getRequestURI());
-        return "error/404";
+        return"custom404";
     }
 }

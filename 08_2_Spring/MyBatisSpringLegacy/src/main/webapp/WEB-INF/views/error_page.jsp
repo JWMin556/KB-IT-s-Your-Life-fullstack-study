@@ -8,11 +8,10 @@
   <title>Insert title here</title>
 </head>
 <body>
-<h4><c:out value="${exception.getMessage()}" /></h4>
+<h4><c:out value="${exception.getMessage()}"></c:out></h4>
 <ul>
-<%--  예이의 전체 스택 트레이스를 순회하며 출력--%>
   <c:forEach items="${exception.getStackTrace() }" var="stack">
-    <li><c:out value="${stack}" /></li>
+    <li><c:out value="${stack}"></c:out></li>
   </c:forEach>
 </ul>
 </body>

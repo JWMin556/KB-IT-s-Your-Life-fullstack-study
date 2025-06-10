@@ -11,15 +11,17 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 
-@ControllerAdvice
+@ControllerAdvice  // 모든 컨트롤러에서 발생하는 예외 처리
 @Log4j2
 public class CommonExceptionAdvice {
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(Exception.class)  // 모든 예외 처리
     public String except(Exception ex, Model model){
         log.error("Exception......."+ex.getMessage());
+        
+        // 모델로 예외 객체를 뷰에 전달
         model.addAttribute("exception",ex);
         log.error(model);
-        return"error_page";
+        return "error_page";  //jsp파일명이다
     }
 
     @ExceptionHandler(NoHandlerFoundException.class)
