@@ -1,0 +1,24 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+* {
+    font-family: 'Noto Sans KR'
+}
+.avatar-sm {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.jumbotron {
+    background-image: url('/resources/images/background.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* 수직 정렬 */
+    align-items: center;      /* 수평 정렬 */
+    text-align: center;
+    min-height: 200px;        /* 필요시 높이 설정 */
+}

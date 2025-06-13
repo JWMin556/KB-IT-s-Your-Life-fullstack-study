@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.scoula.stock.mapper.StockMapper">
+    <select id="getList" resultType="org.scoula.stock.domain.StockVO">
+        SELECT * FROM tbl_stock ORDER BY reg_date DESC
+    </select>
+    <select id="get" resultType="org.scoula.stock.domain.StockVO">
+        SELECT * FROM tbl_stock WHERE no=#{no}
+    </select>
+</mapper>
