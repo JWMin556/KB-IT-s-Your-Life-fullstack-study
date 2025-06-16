@@ -24,6 +24,7 @@
         <div>
             <label>첨부파일</label>
             <input type="file" class="form-control-file border" multiple name="files"/>
+                                                                <%-- DTO 필드명과 일치해야--%>
         </div>
 
         <div>

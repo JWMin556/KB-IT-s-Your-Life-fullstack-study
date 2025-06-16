@@ -52,7 +52,7 @@ public class BoardServiceImpl implements BoardService {
     // 그런데 순수 업로드 과정에서 다른 예외가 발생할 수도 있기에 RuntimeException으로 교체해야 한다.
     @Transactional
     @Override
-    public void create(BoardDTO board) {
+    public BoardDTO create(BoardDTO board) {
         log.info("create......" + board);
         BoardVO boardVO = board.toVo();
         mapper.create(boardVO);
@@ -61,6 +61,7 @@ public class BoardServiceImpl implements BoardService {
         if(files != null && !files.isEmpty()) { // 첨부 파일이 있는 경우
             upload(boardVO.getNo(), files);
         }
+        return get(boardVO.getNo());
     }
 
     private void upload(Long bno, List<MultipartFile> files) {
@@ -77,26 +78,24 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public boolean update(BoardDTO board) {
+    public BoardDTO update(BoardDTO board) {
         log.info("update......" + board);
-        return mapper.update(board.toVo()) == 1;
+        mapper.update(board.toVo());
+        return get(board.getNo());
     }
 
-    @Transactional
     @Override
-    public boolean delete(Long no) {
+    public BoardDTO delete(Long no) {
         log.info("delete...." + no);
+        BoardDTO board = get(no);
 
-        // 1. 첨부파일 목록 먼저 불러오기
         List<BoardAttachmentVO> attachList = mapper.getAttachmentList(no);
-
-        // 2. 반복문으로 하나씩 삭제
         for (BoardAttachmentVO attach : attachList) {
             mapper.deleteAttachment(attach.getNo());
         }
 
-        // 3. 게시글 삭제
-        return mapper.delete(no) == 1;
+        mapper.delete(no);
+        return board;
     }
 
     // 첨부파일 한 개 얻기

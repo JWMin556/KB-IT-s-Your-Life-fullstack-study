@@ -63,6 +63,7 @@ public class BoardController {
     @GetMapping("/download/{no}")
     @ResponseBody // view를 사용하지 않고, 직접 내보냄
     public void download(@PathVariable("no") Long no, HttpServletResponse response) throws Exception {
+        // 예외 처리를 @ControllerAdvice에서 처리한다는 뜻이다.
         BoardAttachmentVO attach = service.getAttachment(no);
         File file = new File(attach.getPath());
         UploadFiles.download(response, file, attach.getFilename());

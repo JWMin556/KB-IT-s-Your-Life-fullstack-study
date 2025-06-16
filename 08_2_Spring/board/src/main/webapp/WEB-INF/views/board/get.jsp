@@ -15,10 +15,12 @@
     </div>
 </div>
 
+<%--자식을 우측에 정렬하기 위해 text-end사용--%>
 <div class="text-end">
     <c:forEach var="file" items="${board.attaches}">
         <div class="attach-file-item">
             <a href="/board/download/${file.no}" class="file-link">
+                <%-- 자바에서는 download/${file.no}의 ${}내부를 path variable이라고 부른다 --%>
                 <i class="fa-solid fa-floppy-disk"></i>
                     ${file.filename} (${file.fileSize})<br>
             </a>
