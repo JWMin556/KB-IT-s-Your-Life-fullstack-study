@@ -8,7 +8,6 @@ public class FindPrimeNum {
         Set<Integer> numSet = new HashSet<>();
         boolean[] visited = new boolean[numbers.length()];
 
-        // 모든 길이(1~n)에 대해 순열 생성
         for (int r = 1; r <= numbers.length(); r++) {
             makeNumbers(numbers.toCharArray(), "", visited, r, numSet);
         }
@@ -38,14 +37,11 @@ public class FindPrimeNum {
         }
     }
 
-    // 소수 판별 함수
     private static boolean isPrime(int num) {
-        if (num < 2) return false;
-
+        if (num < 2) { return false; }
         for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) return false;
+            if (num % i == 0) { return false; }
         }
-
         return true;
     }
 
