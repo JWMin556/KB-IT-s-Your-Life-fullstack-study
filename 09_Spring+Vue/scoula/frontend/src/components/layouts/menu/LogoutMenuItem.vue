@@ -1,10 +1,14 @@
 <script setup>
 import { useRouter } from 'vue-router';
+import { useAuthStore } from '@/stores/auth';
+
+const store = useAuthStore();
 
 const router = useRouter();
 // useRouter(): /router/index.js의 객체 의미
 // useRoute(): 현재 라우트 항목을 의미
 const logout = (e) => {
+  store.logout();
   router.push('/');
 };
 </script>
