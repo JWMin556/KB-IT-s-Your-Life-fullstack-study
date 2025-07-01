@@ -13,7 +13,7 @@ const initState = {
 
 export const useAuthStore = defineStore('auth', () => {
   const state = ref({ ...initState }); //교체작업을 통으로 하기 위해서 ractive가 아니라 ref를 사용한 것이다.
-  const isLogin = computed(() => !!state.value.user.username); // 로그인 여부
+  const isLogin = computed(() => !!state.value.user.username); // 로그인 여부  !!: 강제로 boolean형변환
   const username = computed(() => state.value.user.username); // 로그인 사용자 ID
   const email = computed(() => state.value.user.email); // 로그인 사용자 email
 
@@ -45,7 +45,22 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
+  const changeProfile = (member) => {
+    // member는 수정된 멤버 정보
+    state.value.user.email = member.email;
+    localStorage.setItem('auth', JSON.stringify(state.value));
+  };
+
   load();
 
-  return { state, username, email, isLogin, login, logout, getToken };
+  return {
+    state,
+    username,
+    email,
+    isLogin,
+    changeProfile,
+    login,
+    logout,
+    getToken,
+  };
 });
