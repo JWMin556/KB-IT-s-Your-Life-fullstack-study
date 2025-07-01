@@ -104,7 +104,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests() // 경로별 접근 권한 설정
                 .antMatchers(HttpMethod.OPTIONS).permitAll()  //Cors 사전 요청 허용
                 // .antMatchers(HttpMethod.POST, "/api/member").authenticated()
-                .antMatchers(HttpMethod.PUT, "/api/member",  "/api/member/*/changepassword").authenticated()
+                .antMatchers(HttpMethod.PUT, "/api/member/*",  "/api/member/*/changepassword").authenticated()
                 .anyRequest().permitAll(); // 일단 모든 접근 허용
 
         http.httpBasic().disable()  // 기본 HTTP 인증 비활성화
