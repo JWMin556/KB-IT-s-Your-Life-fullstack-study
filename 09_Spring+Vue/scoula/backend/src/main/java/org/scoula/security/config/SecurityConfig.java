@@ -51,14 +51,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    // 문자셋 필터
-    public CharacterEncodingFilter encodingFilter() {
-        CharacterEncodingFilter encodingFilter= new CharacterEncodingFilter();
-        encodingFilter.setEncoding("UTF-8");
-        encodingFilter.setForceEncoding(true);
-        return encodingFilter;
-    }
-
     // AuthenticationManager 빈 등록
     // 얘는 유저 아이디와 비번을 전달받아 로그인을 확인해주는 역할을 한다 -> 즉, 얘가 로그인 성공시 실패시 응답을 하는 역할
     @Bean
@@ -91,10 +83,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         // 먼저 add하는 것이 우선적으로 진행된다.
-        http.addFilterBefore(encodingFilter(), CsrfFilter.class)  // 한글 인코딩 필터
-                .addFilterBefore(authenticationErrorFilter, UsernamePasswordAuthenticationFilter.class)  // 인증 에러 필터
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)  // Jwt 인증 필터
-                .addFilterBefore(jwtUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);  // 로그인 인증 필터
+        http.addFilterBefore(authenticationErrorFilter, UsernamePasswordAuthenticationFilter.class)  // 인증 에러 필터
+            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)  // Jwt 인증 필터
+            .addFilterBefore(jwtUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);  // 로그인 인증 필터
 
         // 예외처리 설정
         http.exceptionHandling()
@@ -105,6 +96,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.OPTIONS).permitAll()  //Cors 사전 요청 허용
                 // .antMatchers(HttpMethod.POST, "/api/member").authenticated()
                 .antMatchers(HttpMethod.PUT, "/api/member/*",  "/api/member/*/changepassword").authenticated()
+                .antMatchers(HttpMethod.POST, "/api/board/**").authenticated()
+                .antMatchers(HttpMethod.PUT, "/api/board/**").authenticated()
+                .antMatchers(HttpMethod.DELETE, "/api/board/**").authenticated()
                 .anyRequest().permitAll(); // 일단 모든 접근 허용
 
         http.httpBasic().disable()  // 기본 HTTP 인증 비활성화

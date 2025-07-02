@@ -3,19 +3,36 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.scoula.board.mapper.BoardMapper">
+    <resultMap id="attachmentMap" type="org.scoula.board.domain.BoardAttachmentVO">
+        <id column="ano" property="no"/>
+        <result column="bno" property="bno"/>
+        <result column="filename" property="filename"/>
+        <result column="path" property="path"/>
+        <result column="contentType" property="contentType"/>
+        <result column="size" property="size"/>
+        <result column="a_reg_date" property="regDate"/>
+    </resultMap>
+
+    <resultMap id="boardMap" type="org.scoula.board.domain.BoardVO">
+        <id column="no" property="no"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="writer" property="writer"/>
+        <result column="reg_date" property="regDate"/>
+        <result column="update_date" property="updateDate"/>
+        <collection property="attaches" resultMap="attachmentMap"/>
+    </resultMap>
+
     <select id="getList" resultType="org.scoula.board.domain.BoardVO">
+        # C는 컴파일된 데이터임을 의미, 일반적으로 싹다 가져올 때는 붙여주는게 좋음
         <![CDATA[
             select * from tbl_board
             order by no desc
         ]]>
     </select>
 
-<!--    <select id="get" resultType="org.scoula.board.domain.BoardVO">-->
-<!--        select * from tbl_board where no = #{no}-->
-<!--    </select>-->
     <select id="get" resultMap="boardMap">
-        select b.*, a.no as ano, a.bno, a.filename, a.path,
-               a.content_type, a.size, a.reg_date as a_reg_date
+        select b.*, a.no as ano, a.bno, a.filename, a.path, a.content_type, a.size, a.reg_date as a_reg_date
         from tbl_board b
                  left outer join tbl_board_attachment a
                                  on b.no = a.bno
@@ -26,10 +43,9 @@
     <insert id="create">
         insert into tbl_board (title, content, writer) values (#{title}, #{content}, #{writer})
 
-        #가장 최근에 insert한 아이디가 무엇인지 찾고 그것을 Long타입으로 받는다
-        # keyProperty="no"는 setNo메서드로
-        # order="AFTER"는 위 insert를 하고 나서 이 것을 실행한다는 이야기이다
-        # 아래의 selectKey는 insert구문에서 매우 자주 사용하는 문장이다.
+        # 먼저 게시글을 등록하고 그 후에 첨부파일을 등록하는데, 첨부파일 등록시 글번호가 필요하다. 문제는 그 글번호가 autoIncrement
+        # 그렇기에 글번호를 알아야 하므로 select를 통해 가장 마지막에 삽입된 autoIncrement의 id를 가져오는 것이다
+        # order="AFTER"를 붙여야 삽입 전에 가져올 수 있음
         <selectKey resultType="Long" keyProperty="no" keyColumn="no" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -41,7 +57,6 @@
                              content = #{content},
                              writer = #{writer},
                              update_date = now()
-                                # mysql의 함수 now사용
         where no = #{no}
     </update>
 
@@ -66,24 +81,4 @@
         delete from tbl_board_attachment
         where no = #{no}
     </delete>
-
-    <resultMap id="attachmentMap" type="org.scoula.board.domain.BoardAttachmentVO">
-        <id column="ano" property="no"/>
-        <result column="bno" property="bno"/>
-        <result column="filename" property="filename"/>
-        <result column="path" property="path"/>
-        <result column="contentType" property="contentType"/>
-        <result column="size" property="size"/>
-        <result column="a_reg_date" property="regDate"/>
-    </resultMap>
-
-    <resultMap id="boardMap" type="org.scoula.board.domain.BoardVO">
-        <id column="no" property="no"/>
-        <result column="title" property="title"/>
-        <result column="content" property="content"/>
-        <result column="writer" property="writer"/>
-        <result column="reg_date" property="regDate"/>
-        <result column="update_date" property="updateDate"/>
-        <collection property="attaches" resultMap="attachmentMap"/>
-    </resultMap>
 </mapper>
