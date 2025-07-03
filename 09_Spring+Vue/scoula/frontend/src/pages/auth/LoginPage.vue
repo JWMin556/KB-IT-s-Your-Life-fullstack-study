@@ -1,8 +1,9 @@
 <script setup>
 import { computed, reactive, ref } from 'vue';
 import { useAuthStore } from '@/stores/auth';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
+const cr = useRoute();
 const router = useRouter();
 const auth = useAuthStore();
 
@@ -19,7 +20,12 @@ const login = async () => {
   console.log(member);
   try {
     await auth.login(member); // 만약 await login(member)를 하고 싶다면... const {login} = useAuthStore()로 login만 받으면 됨
-    router.push('/');
+    if (cr.query.next) {
+      // 로그인 후 이동할 페이지가 있다면
+      router.push({ name: cr.query.next });
+    } else {
+      router.push('/');
+    }
   } catch (e) {
     console.log('에러=======', e);
     error.value = e.response.data;

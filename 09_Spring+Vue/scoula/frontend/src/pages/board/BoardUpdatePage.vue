@@ -30,6 +30,7 @@ const submit = async () => {
   }
   await boardApi.update(article);
   router.push({ name: 'board/detail', params: { no }, query: cr.query });
+  // params: 라우트 파라미터, query: 쿼리 파라미터
 };
 
 const reset = () => {

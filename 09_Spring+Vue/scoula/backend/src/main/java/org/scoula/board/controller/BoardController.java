@@ -6,6 +6,8 @@ import lombok.extern.log4j.Log4j2;
 import org.scoula.board.domain.BoardAttachmentVO;
 import org.scoula.board.dto.BoardDTO;
 import org.scoula.board.service.BoardService;
+import org.scoula.common.pagination.Page;
+import org.scoula.common.pagination.PageRequest;
 import org.scoula.common.util.UploadFiles;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,9 +31,8 @@ public class BoardController {
             @ApiResponse(code = 500, message = "서버에서 오류가 발생했습니다.")
     })
     @GetMapping("")  //getMapping으로 완성되는 url이 엔드포인트라고 할 수 있다
-    public ResponseEntity<List<BoardDTO>> getList() {
-        return ResponseEntity.ok(service.getList());
-        // 실패할 경우 예외가 발생할 것이고 ControllerAdvice에서 일괄 처리할 것이기에 여기서는 성공했을 때만 가정하면 된다
+    public ResponseEntity<Page> getList(PageRequest pageRequest) {
+        return ResponseEntity.ok(service.getPage(pageRequest));
     }
 
     @ApiOperation(value = "상세정보 얻기", notes = "게시글 상제 정보를 얻는 API")

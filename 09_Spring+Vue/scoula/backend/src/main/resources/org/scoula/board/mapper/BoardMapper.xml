@@ -23,6 +23,16 @@
         <collection property="attaches" resultMap="attachmentMap"/>
     </resultMap>
 
+    <select id="getTotalCount" resultType="java.lang.Integer">
+        select count(*) from tbl_board;
+    </select>
+
+    <select id="getPage" resultType="org.scoula.board.domain.BoardVO">
+        select * from tbl_board order by no desc
+        limit #{offset}, #{amount}
+    </select>
+<!--    질문: limit #{offset}, #{amount}가 뭐지-->
+
     <select id="getList" resultType="org.scoula.board.domain.BoardVO">
         # C는 컴파일된 데이터임을 의미, 일반적으로 싹다 가져올 때는 붙여주는게 좋음
         <![CDATA[
@@ -68,15 +78,18 @@
         insert into tbl_board_attachment(filename, path, content_type, size, bno)
             values(#{filename}, #{path}, #{contentType}, #{size}, #{bno})
     </insert>
+
     <select id="getAttachmentList" resultType="org.scoula.board.domain.BoardAttachmentVO">
         select * from tbl_board_attachment
         where bno = #{bno}  # 게시글 상세보기
         order by filename
     </select>
+
     <select id="getAttachment" resultType="org.scoula.board.domain.BoardAttachmentVO">
         select * from tbl_board_attachment
         where no = #{no}
     </select>
+
     <delete id="deleteAttachment">
         delete from tbl_board_attachment
         where no = #{no}

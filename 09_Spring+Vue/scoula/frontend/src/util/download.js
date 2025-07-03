@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const downloadFile = async (fileUrl) => {
   try {
     const link = document.createElement('a'); // a노드 생성
