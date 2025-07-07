@@ -10,10 +10,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.scoula.exception" ,
+@ComponentScan(basePackages = {"org.scoula.exception" ,  // SpringBoot는 이렇게 일일이 serveletconfig에 추가하지 않아도 Controller 어노테이션만 추가해도 가능하다
                                "org.scoula.controller",
                                "org.scoula.board.controller",
-                               "org.scoula.member.controller"})
+                               "org.scoula.member.controller",
+                                "org.scoula.travel.controller"})
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override

@@ -31,6 +31,8 @@
         select * from tbl_board order by no desc
         limit #{offset}, #{amount}
     </select> <!--    limit #{offset}: 몇 페이지인지 , #{amount}: 한페이지에 몇개 들어갈지-->
+    <!--amount와 offset 모두 PageRequest 클래스에 받아온 값들임-->
+    <!--#{offset}  →  getOffset()     // offset 프로퍼티 → getOffset() 메서드-->
 
     <select id="getList" resultType="org.scoula.board.domain.BoardVO">
         # C는 컴파일된 데이터임을 의미, 일반적으로 싹다 가져올 때는 붙여주는게 좋음
