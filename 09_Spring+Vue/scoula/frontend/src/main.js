@@ -9,6 +9,10 @@ import { VueAwesomePaginate } from 'vue-awesome-paginate';
 import App from './App.vue';
 import router from './router';
 
+import { useKakao } from 'vue3-kakao-maps';
+const rest_api_key = import.meta.env.VITE_KAKAO_REST_API_KEY;
+useKakao(rest_api_key, ['services']);
+
 const app = createApp(App);
 app.use(VueAwesomePaginate);
 app.use(createPinia());

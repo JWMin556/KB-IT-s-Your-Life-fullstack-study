@@ -1,8 +1,9 @@
 <script setup>
 import { useRoute } from 'vue-router';
 const cr = useRoute();
+
 const props = defineProps({
-  travel: { Type: Object, required: true },
+  travel: { type: Object, required: true }, // type은 소문자
 });
 </script>
 
@@ -38,7 +39,7 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .card-img-top {
   height: 200px;
   object-fit: cover;

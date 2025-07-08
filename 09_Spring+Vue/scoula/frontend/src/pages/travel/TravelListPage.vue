@@ -2,11 +2,16 @@
 import api from '@/api/travelApi';
 import { ref, reactive, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+
 import TravelCard from '@/components/travel/TravelCard.vue';
+import { VueAwesomePaginate } from 'vue-awesome-paginate';
+
 const cr = useRoute();
 const router = useRouter();
+
 const page = ref({});
-const travels = computed(() => page.value.list);
+
+const travels = computed(() => page.value.data);
 
 const pageRequest = reactive({
   page: parseInt(cr.query.page) || 1,
@@ -41,17 +46,19 @@ load(pageRequest);
       <i class="fa-solid fa-person-walking-luggage"></i> 여행지 목록
     </h1>
     <div class="">총 {{ page.totalCount }}건</div>
+
     <div class="row">
       <div
         class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3"
         v-for="travel in travels"
         :key="travel.no"
       >
-        <travel-card :travel="travel" />
+        <TravelCard :travel="travel" />
       </div>
     </div>
+
     <div class="mt-5 flex-grow-1 text-center">
-      <vue-awesome-paginate
+      <VueAwesomePaginate
         :total-items="page.totalCount"
         :items-per-page="pageRequest.amount"
         :max-pages-shown="5"
@@ -59,6 +66,7 @@ load(pageRequest);
         v-model="pageRequest.page"
         @click="handlePageChange"
       >
+        <!-- 여기에 있는 #은 named slot이라고 한다 -->
         <template #first-page-button
           ><i class="fa-solid fa-backward-fast"></i
         ></template>
@@ -69,7 +77,7 @@ load(pageRequest);
         <template #last-page-button
           ><i class="fa-solid fa-forward-fast"></i
         ></template>
-      </vue-awesome-paginate>
+      </VueAwesomePaginate>
     </div>
   </div>
 </template>

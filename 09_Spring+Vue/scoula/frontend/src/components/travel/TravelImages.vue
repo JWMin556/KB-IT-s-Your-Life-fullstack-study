@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+const props = defineProps({
+  images: { Type: Array, required: true },
+});
+console.log(props.images);
+let activeImage = ref(props.images[0].url);
+
+const onClick = (ix) => {
+  console.log(ix, props.images[ix].url);
+  activeImage.value = props.images[ix].url;
+};
+</script>
 
 <template>
   <div class="w-100 my-4">
@@ -18,12 +30,13 @@
 
 <style scoped>
 img {
-  object-fit: cover;
+  object-fit: cover; /* 특정 이미지를 영역에 꽉 채우는 css 속성 */
 }
 .thumbnail {
   cursor: pointer;
 }
 .active {
+  /* 실제로 사용중이지는 않음 */
   border: 1px solid red;
 }
 </style>
