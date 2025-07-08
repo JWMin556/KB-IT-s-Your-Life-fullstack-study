@@ -52,5 +52,6 @@ const onClickKakaoMapMarker = () => {
       :clickable="true"
       @on-click-kakao-map-marker="onClickKakaoMapMarker"
     />
+    <!-- 참고로 info-window에 html도 넣을 수 있음 -->
   </KakaoMap>
 </template>
